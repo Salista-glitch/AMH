@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5ff;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+
+
+        .containerA {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .content-sectionA {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .text-contentA {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .image-contentA {
+            flex: 1;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            align-items: flex-start; /* Align items to the top */
+            height: 500px; /* Increased height to accommodate the lowered middle pane */
+        }
+
+        .image-sliceA {
+            height: 450px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .slice-1A, .slice-3A {
+            width: 25%;
+        }
+
+        .slice-2A {
+            width: 30%;
+            margin-top: 80px; /* This lowers the middle pane */
+        }
+
+        .image-sliceA img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #444;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+       
+        /* Responsive design */
+        @media (min-width: 768px) {
+            .content-sectionA {
+                flex-direction: row;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .image-contentA {
+                height: 400px;
+            }
+            
+            .image-sliceA {
+                height: 350px;
+            }
+            
+            .slice-2A {
+                margin-top: 30px; /* Reduced offset on smaller screens */
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-contentA {
+                height: 300px;
+            }
+            
+            .image-sliceA {
+                height: 250px;
+            }
+            
+            .slice-2A {
+                margin-top: 20px; /* Even smaller offset on mobile */
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.2rem;
+            }
+            
+            .slice-1A, .slice-3A {
+                width: 30%;
+            }
+            
+            .slice-2A {
+                width: 35%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="containerA">
+        <div class="content-sectionA">
+            <div class="text-contentA">
+                <h1>About Us</h1>
+                <h2>A New Way For Working For Many Of Professionals.</h2>
+                <p>
+                    Lorem ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem ipsum has been the industry's standard dummy
+                    text ever since the 1500s, when an unknown printer.
+                </p>
+                <p>
+                    took a galley of type and scrambled it to make a type specimen book. It has
+                    survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged.
+                </p>
+                <p>
+                    It was popularised in the 1960s with the release of Letraset sheets containing
+                    Lorem Ipsum passages, and more recently with desktop.
+                </p>
+            </div>
+            <div class="image-contentA">
+                <div class="image-sliceA slice-1A">
+                    <img src="img/motif1.jpg" alt="Mosque left section" style="object-position: left">
+                </div>
+                <div class="image-sliceA slice-2A">
+                    <img src="img/motif1.jpg" alt="Mosque middle section" style="object-position: center">
+                </div>
+                <div class="image-sliceA slice-3A">
+                    <img src="img/motif1.jpg" alt="Mosque right section" style="object-position: right">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            
+        </div>
+    </div>
+</body>
+</html>

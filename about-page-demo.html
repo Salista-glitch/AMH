@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio Layout</title>
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .italicD {
+            font-style: italic;
+        }
+
+        /* Bio section styles */
+        .bio-sectionD {
+            display: flex;
+            flex-direction: row;
+            margin: 3rem 0;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .bio-contentD {
+            flex: 1;
+        }
+
+        .bio-imageD {
+            flex: 1;
+            text-align: center;
+        }
+
+        .bio-imageD img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        /* Reverse layout for second section */
+        .bio-sectionD.reverseD {
+            flex-direction: row-reverse;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .bio-sectionD, .bio-sectionD.reverseD {
+                flex-direction: column;
+            }
+
+            .bio-contentD, .bio-imageD {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- First bio section - Text on left, Image on right -->
+    <section class="bio-sectionD">
+        <div class="bio-contentD">
+            <h2>Our Philosophy: Rooted in Culture, Guided by Joy, Committed to the Child</h2>
+            
+            <p>At African Montessori Hub, our philosophy is rooted in the belief that every child deserves an education that honours their individuality and cultural identity. We are on a mission to make culturally responsive Montessori education accessible across Africa one that nurtures independence, creativity, and critical thinking through joy, purpose, and connection.</p>
+            
+            <p>We see children not merely as students, but as whole beings, capable of contributing meaningfully to their communities when given the freedom to explore, question, and grow. Our educational model celebrates Africa’s diverse cultures and stories, integrating them into learning environments that feel familiar, empowering, and affirming.</p>
+             <p>We support the adults who guide children, including educators, parents, and caregivers, by equipping them with tools, knowledge, and community to create safe, stimulating spaces where young minds can thrive intellectually, emotionally, socially, and spiritually.
+
+             </p>
+          </div>
+        <div class="bio-imageD">
+            <img src="img/about1.avif" alt="Portrait of a person in red overalls">
+        </div>
+    </section>
+
+    <!-- Second bio section - Image on left, Text on right -->
+    <section class="bio-sectionD reverseD">
+        <div class="bio-contentD">
+            <h2>Our Approach: How We Do It</h2>
+            
+            <p>African Montessori Hub believes that joy is not just a feeling it’s a strategy. We place joy at the heart of the learning process because we know it fuels curiosity, deepens engagement, and opens the door to lifelong learning. When both educators and children experience joy, the classroom becomes a space of possibility and transformation.</p>
+            
+            <p>We work with educators across Zimbabwe, guiding them toward a grounded, holistic understanding of Montessori education that reflects our local context. This means reimagining Montessori through an African lens, honouring cultural relevance, community values, and lived experiences.</p>
+            
+            <p>Our approach is simple yet powerful:
+              If we train diverse educators in Zimbabwe to implement Montessori education that is both holistic and culturally rooted, and if we centre joy in their classrooms, then we create an ecosystem where both learners and educators thrive academically, emotionally, and socially.</p>
+        </div>
+        <div class="bio-imageD">
+            <img src="img/about2.avif" alt="Person teaching in a classroom setting">
+        </div>
+    </section>
+</body>
+</html>

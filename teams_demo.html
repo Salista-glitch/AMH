@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Team</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .team-sectionS {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-sidebarS {
+            background-color: #e52528;
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 30%;
+            min-width: 300px;
+        }
+
+        .sidebar-iconS {
+            margin-bottom: 20px;
+            width: 60px;
+        }
+
+        .sidebar-titleS {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-descriptionS {
+            margin-bottom: 30px;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .learn-more-btnS {
+            display: inline-block;
+            padding: 10px 25px;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .learn-more-btnS:hover {
+            background-color: white;
+            color: #e52528;
+        }
+
+        .image-creditS {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .image-creditS a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .team-membersS {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            width: 70%;
+        }
+
+        .team-cardS {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .member-imageS {
+            width: 100%;
+            height: 320px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .member-imageS img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0;
+        }
+
+        .member-positionS {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .member-nameS {
+            color: #e52528;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .member-bioS {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .social-linksS {
+            display: flex;
+            gap: 15px;
+            margin-top: auto;
+        }
+
+        .social-linkS {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            color: #e52528;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid #e52528;
+        }
+
+        .social-linkS:hover {
+            background-color: #e52528;
+            color: white;
+        }
+
+        @media (max-width: 992px) {
+            .team-sectionS {
+                flex-direction: column;
+                margin: 20px;
+            }
+
+            .team-sidebarS {
+                width: 100%;
+                min-width: auto;
+                padding: 30px;
+            }
+
+            .team-membersS {
+                width: 100%;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .team-membersS {
+                grid-template-columns: 1fr;
+                padding: 15px;
+            }
+
+            .sidebar-titleS {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="team-sectionS">
+        <div class="team-sidebarS">
+            <h1 class="sidebar-titleS">Our Team</h1>
+            <p class="sidebar-descriptionS">
+              Behind every great vision is a team that makes it possible. Meet the dedicated individuals working together to bring Montessori education to life across Africa.
+            </p>
+        </div>
+
+        <div class="team-membersS">
+            <div class="team-cardS">
+                <div class="member-imageS">
+                    <img src="img/tatenda.avif" alt="Tatenda B. Muchiriri">
+                </div>
+                <p class="member-positionS">Director | Chief Dreamer</p>
+                <h3 class="member-nameS">Tatenda B. Muchiriri</h3>
+                <p class="member-bioS">
+                  Tatenda is a visionary Montessori leader blending global experience with Afrocentric insight, expanding access through Montessori on Wheels and championing culturally rooted education worldwide.
+                </p>
+                <div class="social-linksS">
+                    <a href="#" class="social-linkS"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-linkS"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-linkS"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tatendamuchiriri.com/">
+                      <button style="background-color: #FFA500; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; transition: background-color 0.3s;">
+                          Learn More
+                      </button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="team-cardS">
+                <div class="member-imageS">
+                    <img src="img/Gabi.avif" alt="Gabirelle Holt">
+                </div>
+                <p class="member-positionS">Director</p>
+                <h3 class="member-nameS">Gabirelle Holt</h3>
+                <p class="member-bioS">
+                  Gabirelle is a seasoned Montessori educator, trainer, and advocate passionate about Infant Mental Health. She champions parent education and quality early childhood care across global platforms.
+                </p>
+                <div class="social-linksS">
+                    <a href="#" class="social-linkS"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-linkS"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-linkS"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="team-cardS">
+                <div class="member-imageS">
+                    <img src="img/Mako.avif" alt="Makomborero C. Muropa">
+                </div>
+                <p class="member-positionS">Director</p>
+                <h3 class="member-nameS">Makomborero C. Muropa</h3>
+                <p class="member-bioS">
+                  A human rights lawyer and Montessori leader, he advocates for children in conflict zones, weaving education and rights-based policy with a focus on African children’s experiences.
+                </p>
+                <div class="social-linksS">
+                    <a href="#" class="social-linkS"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-linkS"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-linkS"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="team-cardS">
+                <div class="member-imageS">
+                    <img src="img/Nikki.avif" alt="Nikki Conyers">
+                </div>
+                <p class="member-positionS">Montessori Research & Advisor</p>
+                <h3 class="member-nameS">Nikki Conyers</h3>
+                <p class="member-bioS">
+                  Nikki blends 18 years of Montessori experience with social justice. A credentialed educator and doctoral student, she leads transformative programs from early childhood to adolescence.
+                </p>
+                <div class="social-linksS">
+                    <a href="#" class="social-linkS"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-linkS"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-linkS"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="team-cardS">
+              <div class="member-imageS">
+                  <img src="img/John.avif" alt="John Bos">
+              </div>
+              <p class="member-positionS">Program Champion</p>
+              <h3 class="member-nameS">John Bos</h3>
+              <p class="member-bioS">
+                Raised Montessori, John brings fresh energy as a consultant to Teacher Education Programs, reconnecting his roots with a professional pivot from business to educational impact.
+              </p>
+              <div class="social-linksS">
+                  <a href="#" class="social-linkS"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social-linkS"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-linkS"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

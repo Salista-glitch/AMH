@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs Offered</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container styles */
+        .containerB {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section styles */
+        .programs-sectionB {
+            padding: 60px 0;
+        }
+
+        .section-headerB {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-titleB {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .section-descriptionB {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* Programs grid */
+        .programs-gridB {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        /* Responsive grid adjustments */
+        @media (min-width: 768px) {
+            .programs-gridB {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .programs-gridB {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Program card styles */
+        .program-cardB {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .program-cardB:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .program-imageB {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .program-contentB {
+            padding: 20px;
+        }
+
+        .program-headerB {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .author-infoB {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .author-avatarB {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .author-nameB {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .more-optionsB {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #999;
+            font-size: 1.2rem;
+        }
+
+        .program-titleB {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .program-descriptionB {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .program-metaB {
+            font-size: 0.8rem;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <section class="programs-sectionB">
+        <div class="containerB">
+            <div class="section-headerB">
+                <h2 class="section-titleB">Programs Offered</h2>
+                <p class="section-descriptionB">
+                    Explore our range of gardening programs designed to help you grow your own food, 
+                    create beautiful spaces, and connect with nature.
+                </p>
+            </div>
+
+            <div class="programs-gridB">
+                <!-- Program Card 1 -->
+                <div class="program-cardB">
+                    <img src="img/menu-3.jpg" alt="Urban Gardening Basics" class="program-imageB">
+                    <div class="program-contentB">
+                        <div class="program-headerB">
+                            <div class="author-infoB">
+                               
+                                <span class="author-nameB">Sarah Johnson</span>
+                            </div>
+                            <button class="more-optionsB">⋮</button>
+                        </div>
+                        <h3 class="program-titleB">Urban Gardening Basics</h3>
+                        <p class="program-descriptionB">
+                            Learn how to grow your own vegetables and herbs in limited urban spaces, perfect for beginners.
+                        </p>
+                        <div class="program-metaB">5 min read</div>
+                    </div>
+                </div>
+
+                <!-- Program Card 2 -->
+                <div class="program-cardB">
+                    <img src="img/menu-3.jpg" alt="Balcony Herb Garden" class="program-imageB">
+                    <div class="program-contentB">
+                        <div class="program-headerB">
+                            <div class="author-infoB">
+                                  <span class="author-nameB">Michael Chen</span>
+                            </div>
+                            <button class="more-optionsB">⋮</button>
+                        </div>
+                        <h3 class="program-titleB">Balcony Herb Garden</h3>
+                        <p class="program-descriptionB">
+                            Create a thriving herb garden on your balcony that provides fresh flavors year-round.
+                        </p>
+                        <div class="program-metaB">7 min read</div>
+                    </div>
+                </div>
+
+                <!-- Program Card 3 -->
+                <div class="program-cardB">
+                    <img src="img/menu-3.jpg" alt="Sustainable Composting" class="program-imageB">
+                    <div class="program-contentB">
+                        <div class="program-headerB">
+                            <div class="author-infoB">
+                                  <span class="author-nameB">Emma Rodriguez</span>
+                            </div>
+                            <button class="more-optionsB">⋮</button>
+                        </div>
+                        <h3 class="program-titleB">Sustainable Composting</h3>
+                        <p class="program-descriptionB">
+                            Turn kitchen waste into nutrient-rich soil for your plants with these simple composting techniques.
+                        </p>
+                        <div class="program-metaB">6 min read</div>
+                    </div>
+                </div>
+
+                <!-- Program Card 4 -->
+                <div class="program-cardB">
+                    <img src="img/menu-3.jpg" alt="Indoor Plant Care" class="program-imageB">
+                    <div class="program-contentB">
+                        <div class="program-headerB">
+                            <div class="author-infoB">
+                                 <span class="author-nameB">David Wilson</span>
+                            </div>
+                            <button class="more-optionsB">⋮</button>
+                        </div>
+                        <h3 class="program-titleB">Indoor Plant Care</h3>
+                        <p class="program-descriptionB">
+                            Master the art of caring for indoor plants to create a green, vibrant living space.
+                        </p>
+                        <div class="program-metaB">8 min read</div>
+                    </div>
+                </div>
+
+                <!-- Program Card 5 -->
+                <div class="program-cardB">
+                    <img src="img/menu-3.jpg" alt="Seasonal Vegetable Growing" class="program-imageB">
+                    <div class="program-contentB">
+                        <div class="program-headerB">
+                            <div class="author-infoB">
+                                 <span class="author-nameB">Priya Patel</span>
+                            </div>
+                            <button class="more-optionsB">⋮</button>
+                        </div>
+                        <h3 class="program-titleB">Seasonal Vegetable Growing</h3>
+                        <p class="program-descriptionB">
+                            Plan and grow vegetables according to seasons for maximum yield and flavor.
+                        </p>
+                        <div class="program-metaB">10 min read</div>
+                    </div>
+                </div>
+
+                <!-- Program Card 6 -->
+                <div class="program-cardB">
+                    <img src="img/menu-3.jpg" alt="Organic Pest Control" class="program-imageB">
+                    <div class="program-contentB">
+                        <div class="program-headerB">
+                            <div class="author-infoB">
+                                <span class="author-nameB">Thomas Brown</span>
+                            </div>
+                            <button class="more-optionsB">⋮</button>
+                        </div>
+                        <h3 class="program-titleB">Organic Pest Control</h3>
+                        <p class="program-descriptionB">
+                            Keep your garden healthy with natural, chemical-free methods to manage common pests.
+                        </p>
+                        <div class="program-metaB">6 min read</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript for additional interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all program cards
+            const programCards = document.querySelectorAll('.program-cardB');
+            
+            // Add click event listeners to cards
+            programCards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    // Prevent default if clicking on the more options button
+                    if (e.target.classList.contains('more-options')) {
+                        e.stopPropagation();
+                        alert('Options menu clicked');
+                        return;
+                    }
+                    
+                    // Get the program title
+                    const programTitle = this.querySelector('.program-titleB').textContent;
+                    console.log(`Program selected: ${programTitle}`);
+                    
+                    // You can add navigation to program details page here
+                    // window.location.href = `/program-details/${programTitle.toLowerCase().replace(/\s+/g, '-')}`;
+                });
+            });
+            
+            // More options button functionality
+            const moreOptionsButtons = document.querySelectorAll('.more-optionsB');
+            moreOptionsButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const programTitle = this.closest('.program-cardB').querySelector('.program-titleB').textContent;
+                    alert(`Options for: ${programTitle}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

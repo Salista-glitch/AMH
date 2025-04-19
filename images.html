@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE WINE TAILS</title>
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Montserrat', 'Segoe UI', sans-serif;
+      }
+  
+      body {
+          background-color: #f5f5f5;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          padding: 20px;
+      }
+  
+      .containerC {
+          width: 100%;
+          max-width: 1200px;
+          background-color: white;
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+          overflow: hidden;
+          padding: 30px;
+      }
+  
+      header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 30px;
+      }
+  
+      .logoC {
+          color: #b87a64;
+          font-size: 24px;
+          font-weight: 600;
+          letter-spacing: 1px;
+      }
+  
+      nav {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 30px;
+      }
+  
+      .nav-linksC {
+          display: flex;
+          list-style: none;
+      }
+  
+      .nav-linksC li {
+          position: relative;
+      }
+  
+      .nav-linksC a {
+          text-decoration: none;
+          color: #333;
+          padding: 10px 30px;
+          font-size: 16px;
+          transition: color 0.3s;
+      }
+  
+      .nav-linksC a:hover {
+          color: #b87a64;
+      }
+  
+      .nav-linksC li::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 50%;
+          height: 2px;
+          background-color: #b87a64;
+          opacity: 0;
+          transition: opacity 0.3s;
+      }
+  
+      .nav-linksC li:hover::after {
+          opacity: 1;
+      }
+  
+      .nav-linksC li.activeC::after {
+          opacity: 1;
+      }
+  
+      .nav-linksC li.activeC a {
+          color: #b87a64;
+      }
+  
+      .gallery-gridC {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-auto-rows: minmax(100px, auto);
+          gap: 10px;
+          margin-bottom: 30px;
+      }
+  
+      .gallery-itemC {
+          position: relative;
+          overflow: hidden;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+  
+      .gallery-itemC img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.5s;
+      }
+  
+      .gallery-itemC:hover img {
+          transform: scale(1.05);
+      }
+  
+      .gallery-itemC::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.2);
+          opacity: 0;
+          transition: opacity 0.3s;
+      }
+  
+      .gallery-itemC:hover::after {
+          opacity: 1;
+      }
+  
+      .item-1C { grid-column: 1 / 5; grid-row: 1 / 3; }
+      .item-2C { grid-column: 5 / 9; grid-row: 1 / 3; }
+      .item-3C { grid-column: 9 / 13; grid-row: 1 / 4; }
+      .item-4C { grid-column: 1 / 5; grid-row: 3 / 5; }
+      .item-5C { grid-column: 5 / 9; grid-row: 3 / 5; }
+      .item-6C { grid-column: 1 / 7; grid-row: 5 / 8; }
+      .item-7C { grid-column: 7 / 10; grid-row: 5 / 7; }
+      .item-8C { grid-column: 10 / 13; grid-row: 4 / 7; }
+      .item-9C { grid-column: 7 / 10; grid-row: 7 / 9; }
+      .item-10C { grid-column: 10 / 13; grid-row: 7 / 9; }
+  
+      .load-moreC {
+          display: block;
+          width: 150px;
+          margin: 20px auto;
+          padding: 12px 0;
+          background-color: #b87a64;
+          color: white;
+          text-align: center;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background-color 0.3s;
+      }
+  
+      .load-moreC:hover {
+          background-color: #a06a54;
+      }
+  
+      @media (max-width: 992px) {
+          .gallery-gridC {
+              grid-template-columns: repeat(6, 1fr);
+          }
+  
+          .item-1C { grid-column: 1 / 4; grid-row: 1 / 3; }
+          .item-2C { grid-column: 4 / 7; grid-row: 1 / 3; }
+          .item-3C { grid-column: 1 / 4; grid-row: 3 / 5; }
+          .item-4C { grid-column: 4 / 7; grid-row: 3 / 5; }
+          .item-5C { grid-column: 1 / 4; grid-row: 5 / 7; }
+          .item-6C { grid-column: 4 / 7; grid-row: 5 / 8; }
+          .item-7C { grid-column: 1 / 3; grid-row: 7 / 9; }
+          .item-8C { grid-column: 3 / 5; grid-row: 7 / 9; }
+          .item-9C { grid-column: 5 / 7; grid-row: 8 / 10; }
+          .item-10C { grid-column: 1 / 5; grid-row: 9 / 11; }
+      }
+  
+      @media (max-width: 768px) {
+          .containerC {
+              padding: 15px;
+          }
+  
+          .gallery-gridC {
+              grid-template-columns: repeat(2, 1fr);
+              gap: 8px;
+          }
+  
+          .item-1C, .item-2C, .item-3C, .item-4C, .item-5C,
+          .item-6C, .item-7C, .item-8C, .item-9C, .item-10C {
+              grid-column: auto;
+              grid-row: auto;
+          }
+  
+          .nav-linksC a {
+              padding: 10px 15px;
+              font-size: 14px;
+          }
+      }
+  
+      @media (max-width: 480px) {
+          .logoC {
+              font-size: 20px;
+          }
+  
+          .nav-linksC {
+              justify-content: center;
+          }
+  
+          .nav-linksC a {
+              padding: 8px 10px;
+              font-size: 13px;
+          }
+  
+          .gallery-gridC {
+              grid-template-columns: 1fr;
+          }
+      }
+  </style>
+  </head>
+  <body>
+      <div class="containerC">
+          <!-- Image Gallery Grid -->
+          <div class="gallery-gridC">
+              <div class="gallery-itemC item-1C"><img src="img/5.jpeg" alt="Woman with wine"></div>
+              <div class="gallery-itemC item-2C"><img src="img/2.PNG" alt="Friends enjoying wine"></div>
+              <div class="gallery-itemC item-3C"><img src="img/6.jpg" alt="Wine glass"></div>
+              <div class="gallery-itemC item-4C"><img src="img/7.jpeg" alt="Wine and food"></div>
+              <div class="gallery-itemC item-5C"><img src="img/1.PNG" alt="Woman in nature"></div>
+              <div class="gallery-itemC item-6C"><img src="img/groupie.avif" alt="Woman drinking"></div>
+              <div class="gallery-itemC item-7C"><img src="img/service-1.jpg" alt="Vineyard view"></div>
+              <div class="gallery-itemC item-8C"><img src="img/8.PNG" alt="Wine picnic"></div>
+              <div class="gallery-itemC item-9C"><img src="img/3.jpeg" alt="Winery"></div>
+              <div class="gallery-itemC item-10C"><img src="img/4.jpeg" alt="Woman on swing"></div>
+          </div>
+      </div>
+  </body>
+  </html>
+  
