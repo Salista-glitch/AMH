@@ -10378,3 +10378,633 @@ h6,
         }
 
 
+.nutria-hero-sectionX {
+      position: relative;
+      height: 100vh;
+      min-height: 500px;
+      width: 100%;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+      color: white;
+    }
+
+    .nutria-video-containerX {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .nutria-video-containerX::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .nutria-video-bgX {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translateX(-50%) translateY(-50%);
+      object-fit: cover;
+    }
+
+    .nutria-contentX {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .nutria-content-innerX {
+      max-width: 600px;
+    }
+
+    .nutria-badgeX {
+      display: inline-block;
+      background-color: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(5px);
+      padding: 0.6rem 1.2rem;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .nutria-headingX {
+      font-size: 3 rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+	  color:#DA9F5B;
+	  text-decoration: underline;
+    }
+
+    .nutria-descriptionX {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+	  color:white;
+    }
+
+    .nutria-buttonX {
+      display: inline-flex;
+      align-items: center;
+      background-color: white;
+      color: #111;
+      padding: 0.8rem 1.5rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .nutria-buttonX:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-2px);
+    }
+
+    .nutria-button-iconX {
+      margin-left: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .nutria-buttonX:hover .nutria-button-iconX {
+      transform: translateX(3px);
+    }
+
+    @media (max-width: 768px) {
+      .nutria-headingX {
+        font-size: 2.5rem;
+      }
+
+      .nutria-contentX {
+        padding: 0 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nutria-headingX {
+        font-size: 2rem;
+      }
+
+      .nutria-badgeX {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+      }
+
+      .nutria-descriptionX {
+        font-size: 1rem;
+      }
+
+      .nutria-buttonX {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+	
+	
+	        .aqua-projects-sectionM {
+            font-family: 'Inter', sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: #1a1a1a;
+        }
+
+        .aqua-projects-headingM {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .aqua-projects-gridM {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .aqua-project-cardM {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .aqua-project-cardM:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .aqua-project-imageM {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .aqua-project-contentM {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .aqua-project-categoryM {
+            color: #3b82f6;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .aqua-project-titleM {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #1a1a1a;
+            text-decoration: underline;
+        }
+
+        .aqua-project-descriptionM {
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .aqua-project-textM {
+            color: #4b5563;
+            margin-top: 1rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .aqua-project-linkM {
+            display: inline-flex;
+            align-items: center;
+            color: #1a1a1a;
+            font-weight: 500;
+            text-decoration: none;
+            margin-top: auto;
+            transition: color 0.2s ease;
+        }
+
+        .aqua-project-linkM:hover {
+            color: #3b82f6;
+        }
+
+        .aqua-project-linkM svg {
+            margin-left: 0.5rem;
+            transition: transform 0.2s ease;
+        }
+
+        .aqua-project-linkM:hover svg {
+            transform: translateX(3px);
+        }
+
+        @media (max-width: 768px) {
+            .aqua-projects-headingM {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .aqua-projects-gridM {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .aqua-projects-sectionM {
+                padding: 1.5rem;
+            }
+
+            .aqua-projects-headingM {
+                font-size: 1.75rem;
+            }
+
+            .aqua-project-imageM {
+                height: 220px;
+            }
+
+            .aqua-project-contentM {
+                padding: 1.25rem;
+            }
+
+            .aqua-project-titleM {
+                font-size: 1.25rem;
+            }
+        }
+		
+		
+		
+		   .page-wrapperJ {
+      font-family: 'Inter', sans-serif;
+      background-color: #FFFBF2;
+      color: #1a1a1a;
+      display: flex;
+      
+      justify-content: center;
+      
+      margin: 0;
+      padding-top: 3rem;
+    }
+
+    .mission-containerJ {
+      max-width: 700px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+      background-color: #ffffff;
+	  margin-bottom: 35px;
+    }
+
+    .mission-introJ {
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+
+    .mission-listJ {
+      text-align: left;
+      padding-left: 1.25rem;
+    }
+
+    .mission-listJ li {
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+	
+	
+	        .eco-project-sectionV {
+            font-family: 'Inter', sans-serif;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            position: relative;
+        }
+
+        .eco-project-contentV {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .eco-project-badgeV {
+            display: inline-block;
+            background-color: #e6f3ff;
+            color: #3b82f6;
+            font-size: 0.75rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .eco-project-categoryV {
+            color: #f97316;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .eco-project-titleV {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .eco-project-descriptionV {
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .eco-project-linkV {
+            display: inline-flex;
+            align-items: center;
+            color: #1a1a1a;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .eco-project-linkV:hover {
+            color: #f97316;
+        }
+
+        .eco-project-linkV svg {
+            margin-left: 0.5rem;
+            transition: transform 0.2s ease;
+        }
+
+        .eco-project-linkV:hover svg {
+            transform: translateX(3px);
+        }
+
+        .eco-project-imageV {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 900px) {
+            .eco-project-sectionV {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .eco-project-image-containerV {
+                order: -1;
+            }
+
+            .eco-project-titleV {
+                font-size: 1.75rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .eco-project-sectionV {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+
+            .eco-project-titleV {
+                font-size: 1.5rem;
+            }
+
+            .eco-project-badgeV {
+                font-size: 0.7rem;
+            }
+        }
+		
+		
+		    .wrapperJU {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
+
+    .headerJU {
+      margin:0;
+      background-color: #141519;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem 5rem;
+      position: relative;
+      
+    }
+
+    .headerJU h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .metaJU {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    .metaJU span {
+      margin: 0 0.5rem;
+    }
+
+    .image-wrapperJU {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      margin-top: -100px;
+    }
+
+    .image-wrapperJU img {
+      width: 65%;
+      height: auto;
+      max-height: 30vh;
+      object-fit: cover;
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .contentJU {
+      max-width: 65%;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .contentJU h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .contentJU p {
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    @media (max-width: 600px) {
+      .headerJU h1 {
+        font-size: 2rem;
+      }
+
+      .image-wrapperJU img {
+        width: 98%;
+        max-height: 25vh;
+      }
+
+      .contentJU {
+        padding: 0 0.5rem;
+      }
+    }
+	
+	
+	        .cta-sectionW {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #1a1a18;
+            border-radius: 24px;
+            padding: 5rem 2rem;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .contact-buttonW {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 2.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-buttonW:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .heading-largeW {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .subtitle-textW {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttonW {
+            display: inline-flex;
+            align-items: center;
+            background-color: white;
+            color: #1a1a18;
+            padding: 0.8rem 1.5rem;
+            padding-right: 1rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-buttonW:hover {
+            transform: translateY(-3px);
+        }
+
+        .button-iconW {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background-color: #1a1a18;
+            border-radius: 50%;
+            margin-left: 0.8rem;
+        }
+
+        .button-iconW svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: white;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        @media (max-width: 768px) {
+            .cta-sectionW {
+                padding: 4rem 1.5rem;
+            }
+
+            .heading-largeW {
+                font-size: 2.5rem;
+            }
+
+            .subtitle-textW {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem;
+            }
+
+            .cta-sectionW {
+                padding: 3rem 1rem;
+                border-radius: 16px;
+            }
+
+            .heading-largeW {
+                font-size: 2rem;
+            }
+
+            .subtitle-textW {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .contact-buttonW {
+                margin-bottom: 2rem;
+            }
+        }

@@ -103,3 +103,46 @@
             });
         });
 
+
+ document.addEventListener('DOMContentLoaded', function () {
+      const video = document.querySelector('.nutria-video-bgX');
+
+      // Ensure video plays on iOS devices
+      video.setAttribute('playsinline', '');
+      video.setAttribute('muted', '');
+      video.muted = true;
+
+      // Play video when it's ready
+      video.addEventListener('canplaythrough', function () {
+        video.play();
+      });
+
+      // Handle video loading issues
+      video.addEventListener('error', function () {
+        const videoContainer = document.querySelector('.nutria-video-containerX');
+        videoContainer.style.backgroundImage =
+          'url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/welcome.PNG-XwkE7Z2rgjPgHfl9kGhanUYGJiVd7P.png")';
+        videoContainer.style.backgroundSize = 'cover';
+        videoContainer.style.backgroundPosition = 'center';
+      });
+    });
+	
+	        document.addEventListener('DOMContentLoaded', function() {
+            const projectCards = document.querySelectorAll('.aqua-project-cardM');
+            
+            projectCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const arrow = this.querySelector('svg');
+                    if (arrow) {
+                        arrow.style.transform = 'translateX(3px)';
+                    }
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const arrow = this.querySelector('svg');
+                    if (arrow) {
+                        arrow.style.transform = 'translateX(0)';
+                    }
+                });
+            });
+        });
