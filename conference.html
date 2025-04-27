@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>African Montessori Hub | Nurturing Minds, Rooted in Africa</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="img/fav.png" rel="icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/your-project-id.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+     <link rel="stylesheet" href="css/style.css">
+    <link href="css/style.min.css" rel="stylesheet">
+
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Inter', sans-serif;
+          
+          color: white;
+          overflow-x: hidden;
+      }
+
+      .hero-sectionW {
+        background-color: #355E3B;
+          position: relative;
+          min-height: 100vh;
+          padding: 2rem;
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+      }
+
+      .content-wrapperW {
+          max-width: 1200px;
+          margin: 0 auto;
+          width: 0%;
+          padding-left: 8vw;
+          position: relative;
+          z-index: 2;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem;
+      }
+
+      .left-columnW {
+          padding-right: 2rem;
+      }
+
+      .logo-containerW {
+          margin-bottom: 2rem;
+          max-width: 300px;
+      }
+
+      .logo-imageW {
+          width: 100%;
+          height: auto;
+      }
+
+      .event-detailsW {
+          margin-bottom: 2rem;
+      }
+
+      .detail-itemW {
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: flex-start;
+      }
+
+      .detail-iconW {
+          margin-right: 1rem;
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+
+      .detail-labelW {
+          font-weight: 600;
+          margin-right: 0.5rem;
+          color: white;
+      }
+
+      .detail-valueW {
+          font-weight: 500;
+      }
+
+      .theme-textW {
+          font-size: 1.1rem;
+          line-height: 1.6;
+          margin-bottom: 2.5rem;
+          
+          color:#e2e8f0; text-decoration: underline;
+      }
+
+      .buttons-containerW {
+          display: flex;
+          gap: 1rem;
+          margin-bottom: 3rem;
+      }
+
+      .register-buttonW {
+          background-color: #B87333;
+          color: white;
+          padding: 0.75rem 1.5rem;
+          border-radius: 100px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          border: none;
+          cursor: pointer;
+          font-size: 1rem;
+      }
+
+      .register-buttonW:hover {
+          background-color: #fbbf24;
+          transform: translateY(-2px);
+      }
+
+      .schedule-buttonW {
+          background-color: transparent;
+          color: white;
+          padding: 0.75rem 1.5rem;
+          border-radius: 100px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          cursor: pointer;
+          font-size: 1rem;
+      }
+
+      .schedule-buttonW:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .countdown-containerW {
+          background-color: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(10px);
+          border-radius: 16px;
+          padding: 1.5rem;
+          display: inline-block;
+      }
+
+      .countdown-titleW {
+          text-align: center;
+          margin-bottom: 1rem;
+          font-size: 0.9rem;
+          color: white;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+      }
+
+      .countdown-timerW {
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+      }
+
+      .timer-itemW {
+          background-color: #B87333;
+          color: white;
+          width: 80px;
+          height: 80px;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+
+      .timer-numberW {
+          font-size: 2rem;
+          font-weight: 700;
+          line-height: 1;
+      }
+
+      .timer-labelW {
+          font-size: 0.8rem;
+          margin-top: 0.25rem;
+      }
+
+      .graphic-elementW {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 50%;
+          height: 100%;
+          z-index: 1;
+          background-image: url('img/afmo_design.png');
+          background-size:contain;
+          background-position: center right;
+          opacity: 0.8;
+      }
+
+      @media (max-width: 1024px) {
+          .content-wrapperW {
+              grid-template-columns: 1fr;
+          }
+
+          .left-columnW {
+              padding-right: 0;
+          }
+
+          .graphic-elementW {
+              opacity: 0.3;
+              width: 100%;
+          }
+      }
+
+      @media (max-width: 768px) {
+          .hero-sectionW {
+              padding: 1.5rem;
+          }
+
+          .logo-containerW {
+              max-width: 200px;
+          }
+
+          .countdown-timerW {
+              gap: 0.5rem;
+          }
+
+          .timer-itemW {
+              width: 70px;
+              height: 70px;
+          }
+
+          .timer-numberW {
+              font-size: 1.75rem;
+          }
+      }
+
+      @media (max-width: 480px) {
+          .buttons-containerW {
+              flex-direction: column;
+          }
+
+          .countdown-timerW {
+              flex-wrap: wrap;
+              justify-content: space-between;
+          }
+
+          .timer-itemW {
+              width: calc(50% - 0.5rem);
+              margin-bottom: 0.5rem;
+          }
+      }
+
+      section {
+      padding: 20px;
+      margin: 10px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    h2 {
+      
+      font-size: 28px;
+      margin-bottom: 10px;
+      text-align: center;
+      text-decoration: underline;
+      
+      text-decoration-color: #654321;
+    }
+    
+    ul {
+      list-style-type: disc; /* Visible dots for unordered lists */
+      padding-left: 20px;
+    }
+    ol {
+      padding-left: 20px;
+    }
+    ul li, ol li {
+      margin: 10px 0;
+    }
+    .containerQ {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 28px;
+      }
+      section {
+        margin: 20px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+        <!-- Navbar Start -->
+        <div class="container-fluid p-0 nav-bar">
+            <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+                <a href="index.html" class="navbar-brand px-lg-4 m-0">
+                    <img src="img/African_Montessori_Hub_Logo_WhiteText_141x141.png" alt="African Montessori Hub Logo" >
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto p-4">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link" >About</a>
+                        <a href="partners.html" class="nav-item nav-link">Global Partnership</a>
+                        <a href="conference.html" class="nav-item nav-link  active">AFMOCON</a>
+                        <a href="teams.html" class="nav-item nav-link">Our Team</a>
+                       <!-- <a href="menu.html" class="nav-item nav-link">Menu</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu text-capitalize">
+                                <a href="reservation.html" class="dropdown-item">Reservation</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            </div>
+                        </div>  -->
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+        <section class="hero-sectionW">
+          <div class="content-wrapperW">
+              <div class="left-columnW">
+                  <div class="logo-containerW">
+                    <h1></h1><br>
+                    </div>
+  
+                  <div class="event-detailsW">
+                      <div class="detail-itemW">
+                          <div class="detail-iconW">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                              </svg>
+                          </div>
+                          <div>
+                              <span class="detail-labelW">Date:</span>
+                              <span class="detail-valueW">August 7-9, 2025</span>
+                          </div>
+                      </div>
+  
+                      <div class="detail-itemW">
+                          <div class="detail-iconW">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                  <circle cx="12" cy="10" r="3"></circle>
+                              </svg>
+                          </div>
+                          <div>
+                              <span class="detail-labelW">Venue:</span>
+                              <span class="detail-valueW">Mana Pools Resort, Harare, Zimbabwe </span>
+                          </div>
+                      </div>
+  
+                      <div class="detail-itemW">
+                          <div class="detail-iconW">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                  <circle cx="12" cy="7" r="4"></circle>
+                              </svg>
+                          </div>
+                          <div>
+                              <span class="detail-labelW">Hosts:</span>
+                              <span class="detail-valueW">African Montessori Hub </span>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <p class="theme-textW" >
+                    Unlocking the Power of Play: Investing in Curiosity and Creativity for a Bright Future</p>
+  
+                  <div class="buttons-containerW">
+                      <a href="#register" class="register-buttonW">Pre-Register</a>
+                     
+                  </div>
+  
+                  <div class="countdown-containerW">
+                      <div class="countdown-titleW">Event Starts In</div>
+                      <div class="countdown-timerW" id="countdown">
+                          <div class="timer-itemW">
+                              <span class="timer-numberW" id="days">--</span>
+                              <span class="timer-labelW">Days</span>
+                          </div>
+                          <div class="timer-itemW">
+                              <span class="timer-numberW" id="hours">--</span>
+                              <span class="timer-labelW">Hours</span>
+                          </div>
+                          <div class="timer-itemW">
+                              <span class="timer-numberW" id="minutes">--</span>
+                              <span class="timer-labelW">Minutes</span>
+                          </div>
+                          <div class="timer-itemW">
+                              <span class="timer-numberW" id="seconds">--</span>
+                              <span class="timer-labelW">Seconds</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="graphic-elementW"></div>
+      </section>
+    
+
+      <div class="containerQ">
+        <section>
+          <h2 style="color: #6E4C1E; font-family: 'Georgia', serif; background-color: #F5EBD0; padding: 20px; border-radius: 12px;">Background and Rationale</h2>
+          <p class="britt">Play, curiosity, and creativity are essential drivers of children’s learning and development. Montessori education, with its child-centered approach, places these elements at the core of its methodology, empowering children to become independent, critical thinkers and lifelong learners. In Africa, where diverse educational challenges and opportunities exist, the Montessori approach offers a powerful framework for transforming learning environments and fostering innovation. This first-of-its-kind Africa Montessori Summit is a celebration of innovation in education through the lens of Montessori philosophy and its potential to revolutionize education in Africa. It will also be a platform to showcase other forward-thinking approaches in education that are driving the achievement of SDG4 in the region. It will convene learners, teachers, Montessori guides, Montessori parents, funders, policymakers, government representatives, NGOs, and other stakeholders to explore the role of Montessori education in shaping a bright, fun-filled future for Africa’s children.</p>
+        </section>
+    
+        <section>
+          <h2 style="color: #6E4C1E; font-family: 'Georgia', serif; background-color: #F5EBD0; padding: 20px; border-radius: 12px;">Conference Objectives</h2>
+          <ol class="britt">
+            <li>Advocate for Montessori principles as a complementary and innovative approach to existing educational systems in Africa.</li>
+            <li>Create a platform for dialogue and partnerships among educators, policymakers, and NGOs to advance innovation in education across the continent.</li>
+            <li>Highlight success stories, research, and innovative practices in Montessori education and beyond.</li>
+            <li>Honor individuals and organizations making notable contributions to Montessori education in Africa.</li>
+          </ol>
+        </section>
+    
+        <section>
+          <h2 style="color: #6E4C1E; font-family: 'Georgia', serif; background-color: #F5EBD0; padding: 20px; border-radius: 12px;">Expected Outcomes</h2>
+          <ol class="britt">
+            <li>Increased awareness among policymakers and stakeholders of the potential of Montessori education to address Africa’s educational challenges.</li>
+            <li>Strengthened networks and collaborations among educators, NGOs, and government representatives to scale Montessori practices.</li>
+            <li>A collection of actionable ideas, research findings, and innovations to inform future efforts in Montessori education in Africa.</li>
+            <li>Celebration and recognition of pioneers and contributors to Montessori education on the continent.</li>
+          </ol>
+        </section>
+    
+        <section>
+          <h2 style="color: #6E4C1E; font-family: 'Georgia', serif; background-color: #F5EBD0; padding: 20px; border-radius: 12px;">Target Participants</h2>
+          <ul class="britt">
+            <li>Montessori educators and guides.</li>
+            <li>Learners and parents engaged in Montessori education.</li>
+            <li>Education policymakers and government officials.</li>
+            <li>NGOs and organizations involved in child education and development.</li>
+            <li>Researchers, students, and innovators in the education sector.</li>
+          </ul>
+        </section>
+      </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid text-white mt-5 pt-5 px-0 position-relative overlay-top" style="background: url('img/footer.PNG');">
+        <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Get In Touch</h4>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                <p class="m-0"><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Follow Us</h4>
+                <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Open Hours</h4>
+                <div>
+                    <h6 class="text-white text-uppercase">Monday - Friday</h6>
+                    <p>8.00 AM - 8.00 PM</p>
+                    <h6 class="text-white text-uppercase">Saturday - Sunday</h6>
+                    <p>2.00 PM - 8.00 PM</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Newsletter</h4>
+                <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">Domain</a>. All Rights Reserved.</a></p>
+            <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">HTML Codex</a> Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Set the date we're counting down to (September 15, 2024)
+          const countdownDate = new Date("Aug 7, 2025 09:00:00").getTime();
+          
+          // Update the countdown every 1 second
+          const countdownTimer = setInterval(function() {
+              // Get today's date and time
+              const now = new Date().getTime();
+              
+              // Find the distance between now and the countdown date
+              const distance = countdownDate - now;
+              
+              // Time calculations for days, hours, minutes and seconds
+              const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+              
+              // Display the result
+              document.getElementById("days").textContent = days;
+              document.getElementById("hours").textContent = hours;
+              document.getElementById("minutes").textContent = minutes;
+              document.getElementById("seconds").textContent = seconds;
+              
+              // If the countdown is finished, display a message
+              if (distance < 0) {
+                  clearInterval(countdownTimer);
+                  document.getElementById("countdown").innerHTML = "<div class='timer-itemW' style='width:100%'><span class='timer-numberW'>Event Started!</span></div>";
+              }
+          }, 1000);
+      });
+  </script>
+</body>
+
+</html>
