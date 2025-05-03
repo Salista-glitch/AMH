@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Schedule</title>
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #0a1429;
+            line-height: 1.6;
+        }
+
+        .containerHH {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .headerHH {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .headerHH h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #0a1429;
+            margin-bottom: 1rem;
+        }
+
+        .controlsHH {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .nav-buttonsHH {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .nav-btnHH, .view-btnHH {
+            background-color: #0a1429;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .nav-btnHH:hover, .view-btnHH:hover {
+            background-color: #1a2b4a;
+        }
+
+        .today-btnHH {
+            background-color: #0a1429;
+        }
+
+        .month-displayHH {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0a1429;
+        }
+
+        .view-optionsHH {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .view-btnHH {
+            background-color: #0a1429;
+        }
+
+        .view-btnHH.active {
+            background-color: #6366f1;
+        }
+
+        .carousel-containerHH {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .carouselHH {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slideHH {
+            min-width: 100%;
+            padding: 2rem;
+            background-color: #f4f1ea;
+            color: #6e5c3d;
+        }
+
+        .carousel-indicatorsHH {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .indicatorHH {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .indicatorHH.active {
+            background-color: #6366f1;
+        }
+
+        .day-headerHH {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #444;
+            padding-bottom: 1rem;
+        }
+
+        .day-titleHH {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #8d9f5d;
+        }
+
+        .audience-sectionHH {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-titleHH {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #8d9f5d;
+        }
+
+        .content-gridHH {
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-cellHH {
+            border: 1px solid #444;
+            padding: 1rem;
+        }
+
+        .feature-listHH, .format-listHH {
+            list-style-type: none;
+        }
+
+        .feature-listHH li, .format-listHH li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .feature-listHH li:before, .format-listHH li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8d9f5d;
+        }
+
+        .format-listHH {
+            counter-reset: item;
+        }
+
+        .format-listHH li {
+            counter-increment: item;
+            padding-left: 2rem;
+        }
+
+        .format-listHH li:before {
+            content: counter(item) ".";
+            position: absolute;
+            left: 0;
+            color: #8d9f5d;
+        }
+
+        @media (max-width: 768px) {
+            .headerHH h1 {
+                font-size: 2.5rem;
+            }
+
+            .controlsHH {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .content-gridHH {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="containerHH">
+        <div class="headerHH">
+            <h1>Event Schedule</h1>
+        </div>
+
+        <div class="controlsHH">
+            <div class="nav-buttonsHH">
+                <button class="nav-btnHH prev-btnHH">&#9664;</button>
+                <button class="nav-btnHH next-btnHH">&#9654;</button>
+            </div>
+        </div>
+
+        <div class="carousel-containerHH">
+            <div class="carouselHH">
+                <div class="carousel-slideHH">
+                    <div class="day-headerHH">
+                        <div class="day-titleHH">Day 1: Leadership Day</div>
+                    </div>
+
+                    <div class="audience-sectionHH">
+                        <div class="section-titleHH">Target Audience:</div>
+                        <p>Government representatives, education policymakers, NGOs, and school leaders.</p>
+                    </div>
+
+                    <div class="content-gridHH">
+                        <div class="content-cellHH">
+                            <div class="section-titleHH">Features:</div>
+                            <ul class="feature-listHH">
+                                <li><strong>Keynote Address:</strong> The Transformative Power of Montessori Education for Africa's Future.</li>
+                                <li><strong>Launch of Research Outputs:</strong> AMH Researchers</li>
+                                <li><strong>Roundtable Dialogue:</strong> Collaborative session with government representatives to explore policies</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-cellHH">
+                            <div class="section-titleHH">Format:</div>
+                            <ol class="format-listHH">
+                                <li>Arrival and registration</li>
+                                <li>Opening performance (school play/African dance group)</li>
+                                <li>Welcome remarks and introductions (Mako)</li>
+                                <li>Welcome Speech - The Transformative Power of Montessori Education for Africa's Future (Fatenda)</li>
+                                <li>Poetry performance / video screening relevant to the theme of 'the power of play in African education'</li>
+                                <li>Keynote from Govt Representative</li>
+                                <li>Keynote from Keynote Speaker 1</li>
+                                <li>Q&A</li>
+                                <li>BREAK</li>
+                                <li>Roundtable Dialogue - Blending Montessori with National Curricula: A Pathway to Innovation</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="carousel-slideHH">
+                  <div class="day-headerHH">
+                      <div class="day-titleHH">Day 2: Learning Day</div>
+                  </div>
+                  
+                  <div class="audience-sectionHH">
+                      <div class="section-titleHH">Target Audience:</div>
+                      <p>Montessori guides, teachers, researchers, and learners.</p>
+                  </div>
+                  
+                  <div class="content-gridHH">
+                      <div class="content-cellHH">
+                          <div class="section-titleHH">Features:</div>
+                          <ul class="feature-listHH">
+                              <li>
+                                  <strong>Workshops:</strong> Hands-on sessions focused on Montessori materials, child development, and classroom management.
+                              </li>
+                              <li>
+                                  <strong>Marketplace of Ideas:</strong> Exhibition booths featuring Montessori materials, resources, and innovations in education.
+                              </li>
+                          </ul>
+                      </div>
+                      
+                      <div class="content-cellHH">
+                          <div class="section-titleHH">Workshop Topics:</div>
+                          <p>A cornucopia of 3-4 workshops offering distinct topics that will explore different topics of interest:</p>
+                          <ol class="format-listHH">
+                              <li>A topic on play and child development</li>
+                              <li>A topic on the deeper meanings of the Montessori materials</li>
+                              <li>A topic on protecting children in play spaces</li>
+                              <li>A topic on innovation in education</li>
+                          </ol>
+                      </div>
+                      
+                      <div class="content-cellHH">
+                          <div class="section-titleHH">Exhibition:</div>
+                          <p>Bippers Exhibits and other exhibitors showcasing Montessori materials, resources, and innovations in education.</p>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Day 3 -->
+              <div class="carousel-slideHH">
+                  <div class="day-headerHH">
+                      <div class="day-titleHH">Day 3: Day-Dreaming Day</div>
+                  </div>
+                  
+                  <div class="audience-sectionHH">
+                      <div class="section-titleHH">Target Audience:</div>
+                      <p>All participants, with a focus on celebrating success and envisioning the future.</p>
+                  </div>
+                  
+                  <div class="content-gridHH">
+                      <div class="content-cellHH">
+                          <div class="section-titleHH">Features:</div>
+                          <ul class="feature-listHH">
+                              <li>
+                                  <strong>TED-Style Talks:</strong> Inspiring presentations from African and global leaders, educators, and innovators.
+                              </li>
+                              <li>
+                                  <strong>Brainstorming Session:</strong> Collaborative ideation on scaling Montessori education and addressing challenges in implementation.
+                              </li>
+                              <li>
+                                  <strong>Awards Ceremony:</strong> Recognizing pioneers and contributors to Montessori education on the continent.
+                              </li>
+                          </ul>
+                      </div>
+                      
+                      <div class="content-cellHH">
+                          <div class="section-titleHH">Speakers:</div>
+                          <p>Proposed speakers include Nicole Bergeron, Dr Ayize, Vee Kativhu and others who will share inspiring presentations on Montessori education and its impact.</p>
+                      </div>
+                      
+                      <div class="content-cellHH">
+                          <div class="section-titleHH">Collaborative Session:</div>
+                          <p>A co-creation session for the most pressing challenges teachers are facing, with a focus on developing actionable solutions and future initiatives.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+            </div>
+
+            <div class="carousel-indicatorsHH">
+                <div class="indicatorHH active" data-index="0"></div>
+                <div class="indicatorHH" data-index="1"></div>
+                <div class="indicatorHH" data-index="2"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.carouselHH');
+            const slides = document.querySelectorAll('.carousel-slideHH');
+            const indicators = document.querySelectorAll('.indicatorHH');
+            const prevBtn = document.querySelector('.prev-btnHH');
+            const nextBtn = document.querySelector('.next-btnHH');
+
+            let currentIndex = 0;
+            const slideWidth = 100;
+
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            prevBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+                updateCarousel();
+            });
+
+            nextBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+                updateCarousel();
+            });
+
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', function() {
+                    currentIndex = parseInt(this.getAttribute('data-index'));
+                    updateCarousel();
+                });
+            });
+
+            const viewBtns = document.querySelectorAll('.view-btnHH');
+            viewBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    viewBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            const todayBtn = document.querySelector('.today-btnHH');
+            if (todayBtn) {
+                todayBtn.addEventListener('click', function() {
+                    currentIndex = 0;
+                    updateCarousel();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

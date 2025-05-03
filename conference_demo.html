@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Startup Conference 2021</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #0a1429;
+            line-height: 1.6;
+        }
+
+        .containerL {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .conference-sectionL {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .conference-sectionL {
+                flex-direction: row;
+                align-items: stretch;
+            }
+        }
+
+        .city-image-containerL {
+            flex: 1;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            min-height: 300px;
+        }
+
+        .city-imageL {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 12px;
+        }
+
+        .conference-contentL {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .conference-titleL {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #0a1429;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .conference-descriptionL {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 2rem;
+            max-width: 90%;
+        }
+
+        .attendee-image-containerL {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 1rem;
+            height: 300px;
+        }
+
+        .attendee-imageL {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 12px;
+        }
+
+        .additional-textL {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #f0f4f8;
+            border-radius: 8px;
+        }
+
+        .additional-textL h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #0a1429;
+        }
+
+        .additional-textL p {
+            font-size: 1rem;
+            color: #4a5568;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 767px) {
+            .conference-titleL {
+                font-size: 2.5rem;
+            }
+
+            .conference-descriptionL {
+                max-width: 100%;
+            }
+
+            .city-image-containerL,
+            .attendee-image-containerL {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="containerL">
+        <section class="conference-sectionL">
+            <div class="city-image-containerL">
+                <img src="img/1-6-copy.jpg" alt="City skyline at night" class="city-imageL">
+            </div>
+
+            <div class="conference-contentL">
+                <h1 class="conference-titleL">Background and Rationale</h1>
+
+                <p class="conference-descriptionL">
+                    Play, curiosity, and creativity are essential drivers of children’s learning and development. Montessori education, with its child-centered approach, places these elements at the core of its methodology, empowering children to become independent, critical thinkers and lifelong learners. In Africa, where diverse educational challenges and opportunities exist, the Montessori approach offers a powerful framework for transforming learning environments and fostering innovation. This first-of-its-kind Africa Montessori Summit is a celebration of innovation in education through the lens of Montessori philosophy and its potential to revolutionize education in Africa. It will also be a platform to showcase other forward-thinking approaches in education that are driving the achievement of SDG4 in the region. It will convene learners, teachers, Montessori guides, Montessori parents, funders, policymakers, government representatives, NGOs, and other stakeholders to explore the role of Montessori education in shaping a bright, fun-filled future for Africa’s children.
+                </p>
+
+                <div class="additional-textL">
+                    <h3>Conference Objectives?</h3>
+                    <p>Advocate for Montessori principles as a complementary and innovative approach to existing educational systems in Africa.</p>
+                    <p>Create a platform for dialogue and partnerships among educators, policymakers, and NGOs to advance innovation in education across the continent.</p>
+                    <p>Highlight success stories, research, and innovative practices in Montessori education and beyond.</p>
+                    <p>Honor individuals and organizations making notable contributions to Montessori education in Africa.</p>
+                </div>
+
+                <div class="attendee-image-containerL">
+                    <img src="img/mana1.jpg" alt="Conference attendees" class="attendee-imageL">
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
