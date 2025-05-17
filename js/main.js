@@ -146,3 +146,5 @@
                 });
             });
         });
+
+        document.querySelector('.js-date').innerText = new Date().getFullYear();
