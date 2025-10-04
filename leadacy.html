@@ -55,13 +55,13 @@
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link" >About</a>
                         <a href="afrocentricmontessori.html" class="nav-item nav-link" >Afrocentric Montessori</a>
-                     
+                        <a href="leadacy.html" class="nav-item nav-link active">LeadAcy</a>
                         <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Programs</a>
                         <div class="dropdown-menu text-capitalize glass-dropdown">
                           <a href="partners.html" class="dropdown-item">Global Partnership</a>
                           <a href="conference.html" class="dropdown-item">AFMOCON</a>
-                           <a href="leadacy.html" class="nav-item nav-link active">LeadAcy</a>
+                           
                             
                         </div>
                     </div> 
@@ -92,9 +92,9 @@
 
      <section class="nutria-hero-sectionX over overlay-bottom">
       <div class="nutria-video-containerX">
-        <video class="nutria-video-bgX" autoplay loop muted playsinline>
+        <video class="nutria-video-bgX" autoplay loop muted playsinline preload="none">
           <source
-            src="img/Pyziu_7476905186049412374-no-watermark.mp4"
+            src="img/leadacy-intro.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
@@ -184,9 +184,14 @@
                       and wrap-around mentorship. Sessions combine mindfulness, group projects, and peace circles
                       to nurture both skill and character.</a>
                 </div>
-                <div class="footer-copyright">
-                    <p></p>
-                </div>
+                
+                    <div class="gallery-itemC item-1C"> 
+                <video class="gallery-videoC"  playsinline loop  controls>
+                    <source src="img/leadacy-intro.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+               
             </div>
         </div>
       </div>
@@ -209,7 +214,10 @@
     <div class="containerC">
         <!-- Image Gallery Grid -->
         <div class="gallery-gridC">
-            <div class="gallery-itemC item-1C"><img src="img/lead1.JPG" alt="Woman with wine"></div>
+            <div class="gallery-itemC item-1C"> 
+                <img src="img/lead1.JPG" alt="Friends enjoying wine">
+            </div>
+            
             <div class="gallery-itemC item-2C"><img src="img/lead2.JPG" alt="Friends enjoying wine"></div>
             <div class="gallery-itemC item-3C"><img src="img/lead5.JPG" alt="Wine glass"></div>
             <div class="gallery-itemC item-4C"><img src="img/lead4.JPG" alt="Wine and food"></div>
@@ -374,6 +382,23 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        const videos = document.querySelectorAll('.gallery-videoC');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target;
+      if(entry.isIntersecting){
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+  }, { threshold: 0.5 }); // 50% of video visible
+
+  videos.forEach(video => observer.observe(video));
+    </script>
 </body>
 
 </html>
