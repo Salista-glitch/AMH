@@ -931,14 +931,13 @@
 
     <!-- Image fills the container -->
     <img 
-      src="img/schedule.jpg" 
-      srcset="img/schedule.jpg 1x, img/schedule@2x.jpg 2x" 
-      alt="Event schedule for the [Conference Name] — click to open full-size."
-      loading="lazy" 
-      decoding="async"
-      style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; display:block;
-             font-family:sans-serif; -webkit-user-drag:none; user-select:none;"
-    />
+  src="img/schedule.jpg" 
+  srcset="img/schedule.jpg 1x, img/schedule@2x.jpg 2x" 
+  alt="Event schedule for the [Conference Name] — click to open full-size."
+  decoding="async"
+  style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; display:block;
+         font-family:sans-serif; -webkit-user-drag:none; user-select:none; min-height:100%; will-change:transform;"
+/>
 
     <!-- Overlay content -->
     <div style="position:absolute; left:1rem; right:1rem; bottom:1rem; display:flex; gap:0.75rem;
