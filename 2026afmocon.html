@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>African Montessori Hub | Nurturing Minds, Rooted in Africa</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="img/fav.png" rel="icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/your-project-id.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+     <link rel="stylesheet" href="css/style.css">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/glass-effect.css">
+
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Inter', sans-serif;
+          
+          color: white;
+          overflow-x: hidden;
+      }
+
+      .hero-sectionW {
+        background-color: #355E3B;
+          position: relative;
+          min-height: 100vh;
+          padding: 2rem;
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+      }
+
+      .content-wrapperW {
+          max-width: 1200px;
+          margin: 0 auto;
+          width: 0%;
+          padding-left: 8vw;
+          position: relative;
+          z-index: 2;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem;
+      }
+
+      .left-columnW {
+          padding-right: 2rem;
+      }
+
+      .logo-containerW {
+          margin-bottom: 2rem;
+          max-width: 300px;
+      }
+
+      .logo-imageW {
+          width: 100%;
+          height: auto;
+      }
+
+      .event-detailsW {
+          margin-bottom: 2rem;
+      }
+
+      .detail-itemW {
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: flex-start;
+      }
+
+      .detail-iconW {
+          margin-right: 1rem;
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+
+      .detail-labelW {
+          font-weight: 300;
+          font-family: 'Pacifico';
+          margin-right: 0.5rem;
+          color: white;
+      }
+
+      .detail-valueW {
+          font-weight: 500;
+      }
+
+      .theme-textW {
+          font-size: 1.1rem;
+          line-height: 1.6;
+          margin-bottom: 2.5rem;
+          font-family: 'Pacifico';
+          color:#e2e8f0;
+      }
+
+      .buttons-containerW {
+          display: flex;
+          gap: 1rem;
+          margin-bottom: 3rem;
+      }
+
+      .register-buttonW {
+          background-color: #B87333;
+          color: white;
+          padding: 0.75rem 1.5rem;
+          
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          border: none;
+          cursor: pointer;
+          font-size: 1rem;
+      }
+
+      .register-buttonW:hover {
+          background-color: #fbbf24;
+          transform: translateY(-2px);
+      }
+
+      .schedule-buttonW {
+          background-color: transparent;
+          color: white;
+          padding: 0.75rem 1.5rem;
+          border-radius: 100px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          cursor: pointer;
+          font-size: 1rem;
+      }
+
+      .schedule-buttonW:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .countdown-containerW {
+          background-color: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(10px);
+          border-radius: 16px;
+          padding: 1.5rem;
+          display: inline-block;
+          width: 360px;          /* fixed width */
+  text-align: center;
+      }
+
+      .countdown-titleW {
+          text-align: center;
+          margin-bottom: 1rem;
+          font-size: 0.9rem;
+          color: white;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+      }
+
+      .countdown-timerW {
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+      }
+
+      .timer-itemW {
+          background-color: #B87333;
+          color: white;
+          width: 80px;
+          height: 80px;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+
+      .timer-numberW {
+          font-size: 2rem;
+          font-weight: 700;
+          line-height: 1;
+      }
+
+      .timer-labelW {
+          font-size: 0.8rem;
+          margin-top: 0.25rem;
+      }
+
+      .graphic-elementW {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 50%;
+          height: 100%;
+          z-index: 1;
+          background-image: url('img/afmodesign2.avif');
+          background-size:cover;
+          background-position: center ;
+          
+          opacity: 0.8;
+      }
+
+      @media (max-width: 1024px) {
+          .content-wrapperW {
+              grid-template-columns: 1fr;
+          }
+
+          .left-columnW {
+              padding-right: 0;
+          }
+
+          .graphic-elementW {
+              opacity: 0.3;
+              width: 100%;
+          }
+      }
+
+      @media (max-width: 768px) {
+          .hero-sectionW {
+              padding: 1.5rem;
+          }
+
+          .logo-containerW {
+              max-width: 200px;
+          }
+
+          .countdown-timerW {
+              gap: 0.5rem;
+          }
+
+          .timer-itemW {
+              width: 70px;
+              height: 70px;
+          }
+
+          .timer-numberW {
+              font-size: 1.75rem;
+          }
+      }
+
+      @media (max-width: 480px) {
+          .buttons-containerW {
+              flex-direction: column;
+          }
+
+          .countdown-timerW {
+              flex-wrap: wrap;
+              justify-content: space-between;
+          }
+
+          .timer-itemW {
+              width: calc(50% - 0.5rem);
+              margin-bottom: 0.5rem;
+          }
+      }
+
+      .containerL {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .conference-sectionL {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .conference-sectionL {
+                flex-direction: row;
+                align-items: stretch;
+            }
+        }
+
+        .city-image-containerL {
+            flex: 1;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            min-height: 300px;
+        }
+
+        .city-imageL {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 12px;
+        }
+
+        .conference-contentL {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .conference-titleL {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #0a1429;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .conference-descriptionL {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 2rem;
+            max-width: 90%;
+        }
+
+        .attendee-image-containerL {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 1rem;
+            height: 300px;
+        }
+
+        .attendee-imageL {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 12px;
+        }
+
+        .additional-textL {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #f4f1ea;
+            border-radius: 8px;
+        }
+
+        .additional-textL h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #0a1429;
+        }
+
+        .additional-textL p {
+            font-size: 1rem;
+            color: #4a5568;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 767px) {
+            .conference-titleL {
+                font-size: 2.5rem;
+            }
+
+            .conference-descriptionL {
+                max-width: 100%;
+            }
+
+            .city-image-containerL,
+            .attendee-image-containerL {
+                height: 250px;
+            }
+        }
+
+
+        
+        .containerRR {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .venue-sectionRR {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .venue-sectionRR {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+
+        .main-headingRR {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #0a1429;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+
+        .venue-cardsRR {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            flex: 1;
+        }
+
+        .venue-cardRR {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 500px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .venue-imageRR {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .venue-infoRR {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 12px 0 0 0;
+            width: 80%;
+            max-width: 400px;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .venue-numberRR {
+            color: #6b7280;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .venue-nameRR {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .venue-locationRR {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .virtual-tourRR {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #7e22ce;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+        }
+
+        .tour-iconRR {
+            background-color: #d8b4fe;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .descriptionRR {
+            flex: 1;
+            font-size: 1.1rem;
+            color: #4a5568;
+            padding: 1rem 0;
+        }
+
+        .content-sectionRR {
+            margin-top: 1rem;
+        }
+
+        .content-sectionRR h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #0a1429;
+        }
+
+        .content-sectionRR p {
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 767px) {
+            .main-headingRR {
+                font-size: 2.5rem;
+            }
+
+            .venue-cardRR {
+                height: 400px;
+            }
+
+            .venue-infoRR {
+                width: 100%;
+                max-width: none;
+            }
+        }
+
+        .containerHH {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .headerHH {
+            text-align: center;
+            margin-bottom: 2rem;
+            
+        }
+
+        .headerHH h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #0a1429;
+            margin-bottom: 1rem;
+        }
+
+        .controlsHH {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .nav-buttonsHH {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .nav-btnHH, .view-btnHH {
+            background-color: #0a1429;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .nav-btnHH:hover, .view-btnHH:hover {
+            background-color: #1a2b4a;
+        }
+
+        .today-btnHH {
+            background-color: #0a1429;
+        }
+
+        .month-displayHH {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0a1429;
+        }
+
+        .view-optionsHH {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .view-btnHH {
+            background-color: #0a1429;
+        }
+
+        .view-btnHH.active {
+            background-color: #6366f1;
+        }
+
+        .carousel-containerHH {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .carouselHH {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slideHH {
+            min-width: 100%;
+            padding: 2rem;
+            background-color: #f4f1ea;
+            color: #6e5c3d;
+        }
+
+        .carousel-indicatorsHH {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .indicatorHH {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .indicatorHH.active {
+            background-color: #6366f1;
+        }
+
+        .day-headerHH {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #444;
+            padding-bottom: 1rem;
+        }
+
+        .day-titleHH {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #8d9f5d;
+        }
+
+        .audience-sectionHH {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-titleHH {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #8d9f5d;
+        }
+
+        .content-gridHH {
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-cellHH {
+            border: 1px solid #444;
+            padding: 1rem;
+        }
+
+        .feature-listHH, .format-listHH {
+            list-style-type: none;
+        }
+
+        .feature-listHH li, .format-listHH li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .feature-listHH li:before, .format-listHH li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8d9f5d;
+        }
+
+        .format-listHH {
+            counter-reset: item;
+        }
+
+        .format-listHH li {
+            counter-increment: item;
+            padding-left: 2rem;
+        }
+
+        .format-listHH li:before {
+            content: counter(item) ".";
+            position: absolute;
+            left: 0;
+            color: #8d9f5d;
+        }
+
+        @media (max-width: 768px) {
+            .headerHH h1 {
+                font-size: 2.5rem;
+            }
+
+            .controlsHH {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .content-gridHH {
+                grid-template-columns: 1fr;
+            }
+        }
+  </style>
+</head>
+
+<body>
+        <!-- Navbar Start -->
+        <div class="container-fluid p-0 nav-bar">
+            <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+                <a href="index.html" class="navbar-brand px-lg-4 m-0">
+                    <img src="img/African_Montessori_Hub_Logo_WhiteText_141x141.png" alt="African Montessori Hub Logo" >
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto p-4">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link" >About</a>
+                        <a href="afrocentricmontessori.html" class="nav-item nav-link " >Afrocentric Montessori</a>
+					     <a href="leadacy.html" class="nav-item nav-link">LeadAcy</a>
+                        <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">AFMOCON</a>
+                        <div class="dropdown-menu text-capitalize glass-dropdown">
+                           
+                            <a href="2025afmocon.html" class="dropdown-item ">2025</a>
+                            <a href="2026afmocon.html" class="dropdown-item active">2026</a>
+                            
+                        </div>
+                    </div> 
+                    <a href="partners.html" class="nav-item nav-link">Global Partnership</a>
+                    <a href="research.html" class="nav-item nav-link">Research</a>
+                    <a href="teams.html" class="nav-item nav-link">Our Team</a>
+                       
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div> 
+                        
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+        <section class="hero-sectionW">
+          <div class="content-wrapperW">
+              <div class="left-columnW">
+                  <div class="logo-containerW">
+                    <h1></h1><br>
+                    </div>
+  
+                  <div class="event-detailsW">
+                      <div class="detail-itemW">
+                          <div class="detail-iconW">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                              </svg>
+                          </div>
+                          <div>
+                              <span class="detail-labelW">Date:</span>
+                              <span class="detail-valueW">August 13-14, 2026</span>
+                          </div>
+                      </div>
+  
+                      <div class="detail-itemW">
+                          <div class="detail-iconW">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                  <circle cx="12" cy="10" r="3"></circle>
+                              </svg>
+                          </div>
+                          <div>
+                              <span class="detail-labelW">Venue:</span>
+                              <span class="detail-valueW">Hyatt Regency Harare The Meikles </span>
+                          </div>
+                      </div>
+  
+                      <div class="detail-itemW">
+                          <div class="detail-iconW">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                  <circle cx="12" cy="7" r="4"></circle>
+                              </svg>
+                          </div>
+                          <div>
+                              <span class="detail-labelW">Hosts:</span>
+                              <span class="detail-valueW">African Montessori Hub </span>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <p class="theme-textW" >
+                    Rise of the Outliers: The New Heroes of Education</p>
+  
+                  <div class="buttons-containerW">
+                      <a href="https://forms.gle/MnvW4NDEQKuZqU1KA" class="register-buttonW" target="_blank">Pre-Register</a>
+                     
+                  </div>
+  
+                  <div class="countdown-containerW">
+                      <div class="countdown-titleW">Event Starts In</div>
+                      <div class="countdown-timerW" id="countdown">
+                          <div class="timer-itemW">
+                              <span class="timer-numberW" id="days">--</span>
+                              <span class="timer-labelW">Days</span>
+                          </div>
+                          <div class="timer-itemW">
+                              <span class="timer-numberW" id="hours">--</span>
+                              <span class="timer-labelW">Hours</span>
+                          </div>
+                          <div class="timer-itemW">
+                              <span class="timer-numberW" id="minutes">--</span>
+                              <span class="timer-labelW">Minutes</span>
+                          </div>
+                          <div class="timer-itemW">
+                              <span class="timer-numberW" id="seconds">--</span>
+                              <span class="timer-labelW">Seconds</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="graphic-elementW"></div>
+      </section>
+    
+
+
+      <div class="containerL">
+        <section class="conference-sectionL">
+            <div class="city-image-containerL">
+                <img src="img/STM_2670.jpg" alt="City skyline at night" class="city-imageL">
+            </div>
+
+            <div class="conference-contentL">
+                <h1 class="conference-titleL" style="color: #6E4C1E; font-family:'Pacifico', 'Georgia', serif; background-color: #F5EBD0; padding: 20px; border-radius: 12px;">Conference Context </h1>
+
+                <p class="conference-descriptionL">
+                    Across Africa and the world, education systems are facing a growing crisis of relevance and legitimacy. Despite decades of reform, many classrooms remain designed for compliance rather than curiosity, and for standardization rather than humanity. Long-standing educational scripts continue to marginalize imagination, culture, and the lived realities of children and communities.
+
+Yet, beyond the center of dominant systems, educators, caregivers, school leaders, artists, technologists, and community builders are quietly reshaping what education can be. They are experimenting, disrupting, healing, and rebuilding learning spaces that honor the child as a rights-holder, cultural being, and active participant in society.
+
+AFMOCON 2026 is a gathering created to bring these outliers into conversation — not to dilute their work, but to recognize, connect, and amplify it. Rooted in African contexts and global perspectives, the conference positions Africa as both the ground and the generator of new educational possibilities.</p>
+
+                <div class="additional-textL">
+                    <h3 style="font-family: 'Pacifico';">Conference Objectives?</h3>
+                    <p>Create a space that honors educators and practitioners who are challenging dominant educational narratives and systems</p>
+                    <p>Surface alternative, community-rooted, and child-centered models shaping education across Africa and beyond.</p>
+                    <p>Build meaningful connections among practitioners, innovators, funders, and policymakers committed to educational transformation.</p>
+                    
+                </div>
+
+                <div class="attendee-image-containerL">
+                    <img src="img/conf2026.webp" alt="Conference attendees" class="attendee-imageL">
+                </div>
+            </div>
+        </section>
+    </div>
+      
+
+
+    <div class="containerRR">
+ 
+        <div class="venue-sectionRR">
+            <div class="venue-cardsRR">
+                <div class="venue-cardRR">
+                    <img src="img/hunter-green.png" alt="Blue Harbor Skyline" class="venue-imageRR">
+                    <div class="venue-infoRR">
+                        <div class="content-sectionRR">
+                            <h3 style="font-family: 'Pacifico';">Expected Outcomes</h3>
+                            <p>New collaborations across countries, sectors, and disciplines focused on reimagining education.</p>
+                            <p>Increased visibility and recognition of outlier educators and community-led initiatives.</p>
+                            <p>Shared insights, practices, and provocations that participants can adapt within their own contexts.</p>
+                            <p>A strengthened continental and global network committed to child-centered, culturally grounded education.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="venue-cardsRR">
+                <div class="venue-cardRR">
+                    <img src="img/copper.png" alt="Blue Harbor Skyline" class="venue-imageRR">
+                    <div class="venue-infoRR">
+                        <div class="content-sectionRR">
+                            <h3 style="font-family: 'Pacifico';">Target Participants </h3>
+                            <p>Educators, Montessori guides, and alternative education practitioners.</p>
+                            <p>School leaders, caregivers, parents, and community educators. </p>
+                            <p>Artists, technologists, and innovators working at the intersection of learning and creativity.</p>
+                            <p>Policymakers, funders, NGOs, and researchers engaged in educational reform and social change. </p>
+                            <p style="margin-bottom: 30px;">Youth and emerging leaders shaping the future of education.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+  <h2 style="color: #6E4C1E; font-family: 'Georgia', serif; background-color: #F5EBD0; padding: 20px; border-radius: 12px; max-width: 700px;">
+    Moments from <span style="font-family: 'Pacifico';">afmocon </span>2025 
+  </h2>
+ 
+</div>
+    <div class="containerC">
+        <!-- Image Gallery Grid -->
+         
+        <div class="gallery-gridC">
+          
+            <div class="gallery-itemC item-1C"><img src="img/STM_3544.jpg" alt="Woman with wine"></div>
+            <div class="gallery-itemC item-2C"><img src="img/STM_2519.jpg" alt="Friends enjoying wine"></div>
+            <div class="gallery-itemC item-3C"><img src="img/STM_3386.jpg" alt="Wine glass"></div>
+             <div class="gallery-itemC item-31C"><img src="img/STM_3094.jpg" alt="Wine glass"></div>
+            <div class="gallery-itemC item-4C"><img src="img/STM_2726.jpg" alt="Wine and food"></div>
+            <div class="gallery-itemC item-5C"><img src="img/STM_2850.jpg" alt="Woman in nature"></div>
+            <div class="gallery-itemC item-6C"><img src="img/STM_3122.jpg" alt="Woman drinking"></div>
+            <div class="gallery-itemC item-7C"><img src="img/STM_3347.jpg" alt="Vineyard view"></div>
+            <div class="gallery-itemC item-8C"><img src="img/STM_2959.jpg" alt="Wine picnic"></div>
+            <div class="gallery-itemC item-9C"><img src="img/STM_3505.jpg" alt="Winery"></div>
+            <div class="gallery-itemC item-10C"><img src="img/STM_3118.jpg" alt="Woman on swing"></div>
+        </div>
+    </div>
+
+
+    <div class="containerHH">
+        <div class="headerHH">
+            <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">Event Schedule</h1> <hr>
+        </div>
+
+<!-- Event Schedule Component (Coming Soon State) -->
+<div style="max-width:1000px; margin:1.5rem auto;">
+  
+  <div
+    aria-label="Conference schedule coming soon"
+    style="position:relative; display:block; width:100%; padding-bottom:56.25%; 
+           background-color:#e5e7eb; border-radius:14px; overflow:hidden; 
+           box-shadow:0 6px 18px rgba(15,23,42,0.12);">
+    
+    <!-- Placeholder image or blurred previous schedule -->
+    <img src="img/schedule-placeholder.jpg"
+         alt="Conference schedule coming soon."
+         decoding="async"
+         style="position:absolute; top:0; left:0; width:100%; height:100%; 
+                object-fit:cover; filter:blur(3px) brightness(0.85);
+                display:block; user-select:none;"/>
+    
+    <!-- Overlay content -->
+    <div style="position:absolute; inset:0; 
+                display:flex; flex-direction:column; 
+                justify-content:center; align-items:center; 
+                text-align:center; gap:0.8rem; z-index:1;">
+      
+      <div style="background:rgba(0,0,0,0.65); 
+                  -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px);
+                  color:#fff; padding:0.8rem 1rem; border-radius:12px; 
+                  font-size:1.1rem; font-weight:500;">
+        Conference Schedule
+      </div>
+      
+      <div style="background:rgba(255,255,255,0.95); 
+                  padding:0.45rem 0.7rem; border-radius:8px; 
+                  font-size:0.9rem; color:#0b1220;">
+        Coming Soon
+      </div>
+    </div>
+  </div>
+  
+  <div style="margin-top:0.6rem; font-size:20px; color:black; text-align:center; 
+              line-height:1.3; font-family:Georgia,'Times New Roman',Times,serif;">
+    The full programme will be released closer to the conference date.
+  </div>
+</div>
+
+
+        <!---
+        <div class="controlsHH">
+            <div class="nav-buttonsHH">
+                <button class="nav-btnHH prev-btnHH" style="background-color: #355E3B;">&#9664;</button>
+                <button class="nav-btnHH next-btnHH" style="background-color: #355E3B;">&#9654;</button>
+            </div>
+        </div>
+
+        <div class="carousel-containerHH">
+            <div class="carouselHH">
+                <div class="carousel-slideHH">
+                    <div class="day-headerHH">
+                        <div class="day-titleHH">Day 1: <span style="font-family: 'Pacifico';">Leadership Day</span> </div>
+                    </div>
+
+                    <div class="audience-sectionHH">
+                        <div class="section-titleHH">Target Audience:</div>
+                        <p>Government representatives, education policymakers, NGOs, and school leaders.</p>
+                    </div>
+
+                    <div class="content-gridHH">
+                        <div class="content-cellHH">
+                            <div class="section-titleHH">Features:</div>
+                            <ul class="feature-listHH">
+                                <li><strong>Keynote Address:</strong> The Transformative Power of Montessori Education for Africa's Future.</li>
+                                <li><strong>Launch of Research Outputs:</strong> AMH Researchers</li>
+                                <li><strong>Roundtable Dialogue:</strong> Collaborative session with government representatives to explore policies supporting Montessori adoption and integration. </li>
+                                <li><strong>Networking Dinner:</strong> Opportunities for stakeholders to connect.  </li>
+                                
+                            </ul>
+                        </div>
+
+                        <div class="content-cellHH">
+                            <div class="section-titleHH">Format:</div>
+                            <ol class="format-listHH">
+                                <li>Arrival and registration</li>
+                                <li>Opening performance (school play/African dance group)</li>
+                                <li>Welcome remarks and introductions (Mako)</li>
+                                <li>Welcome Speech - The Transformative Power of Montessori Education for Africa's Future (Fatenda)</li>
+                                <li>Poetry performance / video screening relevant to the theme of 'the power of play in African education'</li>
+                                <li>Keynote from Govt Representative</li>
+                                <li>Keynote from Keynote Speaker 1</li>
+                                <li>Q&A</li>
+                                <li>BREAK</li>
+                                <li>Roundtable Dialogue - Blending Montessori with National Curricula: A Pathway to Innovation</li>
+                                <li>Research Outputs Presentation  - Dr Mahere and Prof Hapanyengwi</li>
+                                <li>LUNCH</li>
+                                <li>People break for lunch and go prepare for the Networking Dinner</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2 
+                <div class="carousel-slideHH">
+                  <div class="day-headerHH">
+                      <div class="day-titleHH">Day 2: <span style="font-family: 'Pacifico';">Learning Day</span></div>
+                  </div>
+                  
+                  <div class="audience-sectionHH">
+                      <div class="section-titleHH">Target Audience:</div>
+                      <p>Montessori guides, teachers, researchers, and learners.</p>
+                  </div>
+                  
+                  <div class="content-gridHH">
+                      <div class="content-cellHH">
+                          <div class="section-titleHH">Features:</div>
+                          <ul class="feature-listHH">
+                              <li>
+                                  <strong>Workshops:</strong> Hands-on sessions focused on Montessori materials, child development, and classroom management.
+                              </li>
+                              <li>
+                                  <strong>Marketplace of Ideas:</strong> Exhibition booths featuring Montessori materials, resources, and innovations in education.
+                              </li>
+                              <li>
+                                <strong>Innovation Research Lab:</strong> session  showcasing studies on innovation in education in Africa and globally. 
+                              </li>
+                          </ul>
+                      </div>
+                      
+                      <div class="content-cellHH">
+                          <div class="section-titleHH">Workshop Topics:</div>
+                          <p>A cornucopia of 3-4 workshops offering distinct topics that will explore different topics of interest:</p>
+                          <ol class="format-listHH">
+                              <li>A topic on play and child development</li>
+                              <li>A topic on the deeper meanings of the Montessori materials</li>
+                              <li>A topic on protecting children in play spaces</li>
+                              <li>A topic on innovation in education</li>
+                          </ol>
+                      </div>
+                      
+                      <div class="content-cellHH">
+                          <div class="section-titleHH">Exhibition:</div>
+                          <p>Bippers Exhibits and other exhibitors showcasing Montessori materials, resources, and innovations in education.</p>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Day 3 
+              <div class="carousel-slideHH">
+                  <div class="day-headerHH">
+                      <div class="day-titleHH">Day 3: <span style="font-family: 'Pacifico';">Day-Dreaming Day</span></div>
+                  </div>
+                  
+                  <div class="audience-sectionHH">
+                      <div class="section-titleHH">Target Audience:</div>
+                      <p>All participants, with a focus on celebrating success and envisioning the future.</p>
+                  </div>
+                  
+                  <div class="content-gridHH">
+                      <div class="content-cellHH">
+                          <div class="section-titleHH">Features:</div>
+                          <ul class="feature-listHH">
+                              <li>
+                                  <strong>TED-Style Talks:</strong> Inspiring presentations from African and global leaders, educators, and innovators.
+                              </li>
+                              <li>
+                                  <strong>Brainstorming Session:</strong> Collaborative ideation on scaling Montessori education and addressing challenges in implementation.
+                              </li>
+                              <li>
+                                  <strong>Awards Ceremony:</strong> Recognizing individuals, schools, and organizations for their contributions to Montessori education in Africa. 
+                              </li>
+                              <li>
+                                <strong>Closing Session:</strong> The Future of Montessori in Africa: Collective Vision and Commitment
+                              </li>
+                          </ul>
+                      </div>
+                      
+                      <div class="content-cellHH">
+                          <div class="section-titleHH">Speakers:</div>
+                          <p>Proposed speakers include Nicole Bergeron, Dr Ayize, Vee Kativhu and others who will share inspiring presentations on Montessori education and its impact.</p>
+                      </div>
+                      
+                      <div class="content-cellHH">
+                          <div class="section-titleHH">Collaborative Session:</div>
+                          <p>A co-creation session for the most pressing challenges teachers are facing, with a focus on developing actionable solutions and future initiatives.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+            </div>
+
+            <div class="carousel-indicatorsHH">
+                <div class="indicatorHH active" data-index="0"></div>
+                <div class="indicatorHH" data-index="1"></div>
+                <div class="indicatorHH" data-index="2"></div>
+            </div>
+        </div> -->
+    </div>
+
+
+
+    
+    <!-- Footer Start -->
+    <div class="container-fluid  text-white mt-5 pt-5 px-0 position-relative overlay-top" style="background: url('img/footer.PNG');">
+        <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Get In Touch</h4>
+                <p  style="color:white"><i class="fa fa-map-marker-alt mr-2"></i> 54 Marlborough Dr Harare,Zimbabwe</p>
+                <p  style="color:white"><i class="fa fa-phone-alt mr-2"></i>+263789922218</p>
+                <p  style="color:white"><i class="fa fa-phone-alt mr-2"></i>+1 (303) 517-7615</p>
+                <p class="m-0"  style="color:white"><i class="fa fa-envelope mr-2"></i>info@africanmontessorihub.org</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <!-- <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Follow Us</h4>
+                <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p> 
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div> -->
+            </div>
+           <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Follow Us</h4>
+                 <!--<p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p> -->
+                <div class="d-flex justify-content-start">
+                    
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" 
+                        href="https://wa.me/+263789922218" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        </a>
+
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://www.linkedin.com/company/greatzimbabwemontessori/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square" href="https://www.instagram.com/amh_zim?igsh=YjFtZnBnY3p6amRt" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div> 
+             <!--<div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Newsletter</h4>
+                <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <p class="mb-2 text-white">&copy; <span class="js-date"></span> <a class="font-weight-bold" href="#"> African Montessori Hub</a>. Where education meets purpose.</a></p>
+            
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+   document.addEventListener('DOMContentLoaded', function () {
+  const startDate = new Date("August 13, 2026 09:00:00").getTime();
+  const endDate   = new Date("August 14, 2026 18:00:00").getTime();
+
+  const countdownTimer = setInterval(function () {
+    const now = new Date().getTime();
+
+    // BEFORE EVENT
+    if (now < startDate) {
+      const distance = startDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((distance / (1000 * 60)) % 60);
+      const seconds = Math.floor((distance / 1000) % 60);
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
+      return;
+    }
+
+    // DURING EVENT
+    if (now >= startDate && now <= endDate) {
+      showSingleMessage("Event In Progress");
+      return;
+    }
+
+    // AFTER EVENT
+    if (now > endDate) {
+      showSingleMessage("Event Ended");
+      clearInterval(countdownTimer);
+    }
+  }, 1000);
+
+  function showSingleMessage(text) {
+    const items = document.querySelectorAll(".timer-itemW");
+
+    items.forEach((item, index) => {
+      if (index === 0) {
+        item.innerHTML = `<span class="timer-numberW">${text}</span>`;
+        item.classList.add("full-messageW");
+      } else {
+        item.style.display = "none";
+      }
+    });
+  }
+});
+
+
+      
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.carouselHH');
+            const slides = document.querySelectorAll('.carousel-slideHH');
+            const indicators = document.querySelectorAll('.indicatorHH');
+            const prevBtn = document.querySelector('.prev-btnHH');
+            const nextBtn = document.querySelector('.next-btnHH');
+
+            let currentIndex = 0;
+            const slideWidth = 100;
+
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            prevBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+                updateCarousel();
+            });
+
+            nextBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+                updateCarousel();
+            });
+
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', function() {
+                    currentIndex = parseInt(this.getAttribute('data-index'));
+                    updateCarousel();
+                });
+            });
+
+            const viewBtns = document.querySelectorAll('.view-btnHH');
+            viewBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    viewBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            const todayBtn = document.querySelector('.today-btnHH');
+            if (todayBtn) {
+                todayBtn.addEventListener('click', function() {
+                    currentIndex = 0;
+                    updateCarousel();
+                });
+            }
+        });
+    
+  </script>
+</body>
+
+</html>

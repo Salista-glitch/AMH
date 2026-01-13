@@ -172,6 +172,8 @@
           border-radius: 16px;
           padding: 1.5rem;
           display: inline-block;
+          width: 360px;          /* fixed width */
+  text-align: center;
       }
 
       .countdown-titleW {
@@ -739,16 +741,17 @@
                         <a href="afrocentricmontessori.html" class="nav-item nav-link " >Afrocentric Montessori</a>
 					     <a href="leadacy.html" class="nav-item nav-link">LeadAcy</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Programs</a>
-                            <div class="dropdown-menu text-capitalize glass-dropdown">
-                                
-                                <a href="partners.html" class="dropdown-item">Global Partnership</a>
-                                <a href="conference.html" class="nav-item nav-link active">AFMOCON</a>
-                                
-                                
-                            </div>
-                        </div> 
-                        <a href="teams.html" class="nav-item nav-link">Our Team</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">AFMOCON</a>
+                        <div class="dropdown-menu text-capitalize glass-dropdown">
+                           
+                            <a href="2025afmocon.html" class="dropdown-item active">2025</a>
+                            <a href="2026afmocon.html" class="dropdown-item">2026</a>
+                            
+                        </div>
+                    </div> 
+                    <a href="partners.html" class="nav-item nav-link">Global Partnership</a>
+                    <a href="research.html" class="nav-item nav-link">Research</a>
+                    <a href="teams.html" class="nav-item nav-link">Our Team</a>
                        
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div> 
@@ -1199,37 +1202,56 @@
     <script src="js/main.js"></script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          // Set the date we're counting down to (September 15, 2024)
-          const countdownDate = new Date("December 11, 2025 09:00:00").getTime();
-          
-          // Update the countdown every 1 second
-          const countdownTimer = setInterval(function() {
-              // Get today's date and time
-              const now = new Date().getTime();
-              
-              // Find the distance between now and the countdown date
-              const distance = countdownDate - now;
-              
-              // Time calculations for days, hours, minutes and seconds
-              const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-              const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-              const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-              const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-              
-              // Display the result
-              document.getElementById("days").textContent = days;
-              document.getElementById("hours").textContent = hours;
-              document.getElementById("minutes").textContent = minutes;
-              document.getElementById("seconds").textContent = seconds;
-              
-              // If the countdown is finished, display a message
-              if (distance < 0) {
-                  clearInterval(countdownTimer);
-                  document.getElementById("countdown").innerHTML = "<div class='timer-itemW' style='width:100%'><span class='timer-numberW'>Event Started!</span></div>";
-              }
-          }, 1000);
-      });
+   document.addEventListener('DOMContentLoaded', function () {
+  const startDate = new Date("December 11, 2025 09:00:00").getTime();
+  const endDate   = new Date("December 12, 2025 18:00:00").getTime();
+
+  const countdownTimer = setInterval(function () {
+    const now = new Date().getTime();
+
+    // BEFORE EVENT
+    if (now < startDate) {
+      const distance = startDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((distance / (1000 * 60)) % 60);
+      const seconds = Math.floor((distance / 1000) % 60);
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
+      return;
+    }
+
+    // DURING EVENT
+    if (now >= startDate && now <= endDate) {
+      showSingleMessage("Event In Progress");
+      return;
+    }
+
+    // AFTER EVENT
+    if (now > endDate) {
+      showSingleMessage("Event Ended");
+      clearInterval(countdownTimer);
+    }
+  }, 1000);
+
+  function showSingleMessage(text) {
+    const items = document.querySelectorAll(".timer-itemW");
+
+    items.forEach((item, index) => {
+      if (index === 0) {
+        item.innerHTML = `<span class="timer-numberW">${text}</span>`;
+        item.classList.add("full-messageW");
+      } else {
+        item.style.display = "none";
+      }
+    });
+  }
+});
+
 
       
         document.addEventListener('DOMContentLoaded', function() {
