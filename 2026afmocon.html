@@ -721,6 +721,229 @@
                 grid-template-columns: 1fr;
             }
         }
+
+      /* ==========================================================================
+   Speakers Section Styles
+   ========================================================================== */
+.speakers-sectionS {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    color: #333333;
+}
+
+.speakers-title-wrapperS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.speakers-gridS {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2.5rem;
+}
+
+.speaker-cardS {
+    background-color: #ffffff;
+    border: 3px solid #355E3B;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.speaker-img-wrapperS {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+    border: 1px solid #e2e8f0;
+    background-color: #f7fafc;
+}
+
+.speaker-imgS {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.speaker-nameS {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0a1429;
+    margin-bottom: 0.25rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.speaker-titleS {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.bio-btnS {
+    background-color: #355E3B;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    margin-top: auto;
+    width: 100%;
+}
+
+.bio-btnS:hover {
+    background-color: #B87333;
+    color: white;
+}
+
+/* ==========================================================================
+   Modal Component Styles (Mobile-Optimized)
+   ========================================================================== */
+.modal-overlayS {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 20, 41, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    padding: 1rem;
+}
+
+.modal-overlayS.activeS {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-contentS {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 650px;
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    color: #4a5568;
+    max-height: 85vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal-overlayS.activeS .modal-contentS {
+    transform: translateY(0);
+}
+
+.modal-closeS {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #f7fafc;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #a0aec0;
+    transition: all 0.2s;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    z-index: 10;
+}
+
+.modal-closeS:hover {
+    color: #e53e3e;
+    background-color: #fff5f5;
+}
+
+.modal-headerS {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #edf2f7;
+    padding-bottom: 1.5rem;
+    padding-right: 2.5rem;
+}
+
+.modal-img-wrapperS {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px solid #355E3B;
+    background-color: #f7fafc;
+}
+
+.modal-imgS {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-infoS h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0a1429;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+}
+
+.modal-infoS p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.modal-bodyS {
+    font-size: 1rem;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+@media (max-width: 480px) {
+    .modal-headerS {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-right: 0;
+        gap: 0.8rem;
+    }
+    .modal-contentS {
+        padding: 1.5rem;
+    }
+    .speakers-sectionS {
+        padding: 0 1rem;
+    }
+}
   </style>
 </head>
 
@@ -920,6 +1143,289 @@ AFMOCON 2026 is a gathering created to bring these outliers into conversation �
     </div>
 
 
+
+    <!-- ==========================================================================
+     Speakers Section Start
+     ========================================================================== -->
+<section class="speakers-sectionS">
+    <div class="speakers-title-wrapperS">
+        <h2 style="color: #6E4C1E; font-family: 'Georgia', serif; background-color: #F5EBD0; padding: 20px; border-radius: 12px; max-width: 700px; width: 100%;">
+            Meet Our <span style="font-family: 'Pacifico';">2026</span> Speakers
+        </h2>
+    </div>
+
+    <div class="speakers-gridS">
+        <!-- Card 1: Keletso Ndlovu -->
+        <div class="speaker-cardS">
+            <div class="speaker-img-wrapperS">
+                <img src="img/speakers/speaker (4).JPG" alt="Mr. Keletso Ndlovu" class="speaker-imgS">
+            </div>
+            <h3 class="speaker-nameS">Mr. Keletso Ndlovu</h3>
+            <p class="speaker-titleS">Montessori Trainer | Early Childhood Educator</p>
+            <button class="bio-btnS" data-name="Mr. Keletso Ndlovu" data-title="Montessori Trainer | Early Childhood Educator" data-img="img/speakers/speaker (4).JPG" data-bio="Keletso Ndlovu is a Montessori trainer and instructional coach with over eight years of experience in education. He currently works at the Molo Mhlaba Institute, where he mentors educators and classroom assistants in building prepared environments that foster independence, curiosity, and purposeful learning.
+
+            He guides fellows’ professional and personal growth, empowering them to become multipliers of impact within their communities. As a member of the management committee at Molo Mhlaba School, he contributes to strategic direction and actively supports the school’s mission and development.
+
+            With eight years of experience as an early childhood Montessori educator, Keletso brings deep classroom insight into his leadership and training practice. His facilitation style is reflective, collaborative, and rooted in joy, creating learning spaces where educators feel both supported and inspired.">Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i></button>
+        </div>
+
+        <!-- Card 2: Masimba Tinashe Madondo -->
+        <div class="speaker-cardS">
+            <div class="speaker-img-wrapperS">
+                <img src="img/speakers/speaker (15).JPG" alt="Masimba Tinashe Madondo" class="speaker-imgS">
+            </div>
+            <h3 class="speaker-nameS">Masimba Tinashe Madondo</h3>
+            <p class="speaker-titleS">General Manager | Consultus Publishing Services</p>
+            <button class="bio-btnS" data-name="Masimba Tinashe Madondo" data-title="General Manager | Consultus Publishing Services" data-img="img/speakers/speaker (15).JPG" data-bio="Masimba Tinashe Madondo is a distinguished publishing executive, education strategist, and advocate for knowledge access across Africa, with over a decade of leadership shaping the future of educational content and learning ecosystems.
+
+            As the General Manager of Consultus Publishing Services (CPS), Masimba leads the company’s strategic direction, operational excellence, and business growth, positioning CPS as a key player in curriculum-aligned educational publishing and digital learning innovation in Zimbabwe and beyond. His work sits at the intersection of education, publishing, and technology—where he continues to push for accessible, relevant, and future-focused learning resources for African children.
+
+            With a professional journey that spans higher education sales, education tourism, digital publishing, and customer success, Masimba brings a rare blend of commercial insight and deep understanding of both traditional and emerging publishing landscapes. His experience supporting global self-publishing platforms, including Amazon and Kindle Direct Publishing, has strengthened his vision for African-led educational innovation.
+
+            For the past 12 years, he has been instrumental in CPS’s growth, product development, and influence within the regional education sector.
+
+            Beyond his executive leadership, Masimba is a respected voice in policy, intellectual property, and publishing advocacy. He currently serves as Chairman of the Zimbabwe Book Publishers Association, Chairman of the Reprographic Rights Association of Zimbabwe, Council Member of the National Library and Documentation Service, and Southern Africa Board Representative for the African Publishers Network.
+
+            At AFMOCON 2026, Masimba brings a powerful perspective on the future of African education, publishing, and the role of knowledge systems in shaping a new generation of learners and leaders.">Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i></button>
+        </div>
+
+        <!-- Card 3: Makomborero Carl Muropa -->
+        <div class="speaker-cardS">
+            <div class="speaker-img-wrapperS">
+                <img src="img/speakers/speaker (12).JPG" alt="Makomborero Carl Muropa" class="speaker-imgS">
+            </div>
+            <h3 class="speaker-nameS">Makomborero Carl Muropa</h3>
+            <p class="speaker-titleS">VP of Programs | Aslan Housing Foundation</p>
+            <button class="bio-btnS" data-name="Makomborero Carl Muropa" data-title="VP of Programs | Aslan Housing Foundation" data-img="img/speakers/speaker (12).JPG" data-bio="Makomborero Carl Muropa is a Zimbabwean human rights lawyer, education strategist, and housing justice practitioner whose work bridges law, education, and systems transformation. He currently serves as Vice President of Programs at Aslan Housing Foundation, where he leads program execution, strategic partnerships, and organizational systems-building to expand equitable housing pathways for ministry leaders and nonprofit professionals. His appointment to this role began in 2026.
+
+            Makomborero is also the Co-founder and Board Chair of the African Montessori Hub, where he champions Afrocentric, child-centered education as a tool for liberation, dignity, and social transformation. His work is grounded in the belief that African children and educators must be central architects of their own learning futures, helping shape new educational systems rooted in local wisdom, identity, and justice.
+
+            He holds an LLB (Honours) from Great Zimbabwe University and advanced legal training in Human Rights and Democratisation from the University of Pretoria, with academic interests spanning constitutionalism, business and human rights, and development finance.
+
+            In 2026, Makomborero was named a Ford Foundation Global Fellowship fellow, recognized among global leaders addressing structural inequality through bold, systems-level work. At AFMOCON 2026, he brings a unique perspective on leadership, justice, housing, and education—challenging us to imagine African futures built on dignity, equity, and possibility.">Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i></button>
+        </div>
+
+        <!-- Card 4: Patience Geraldine Tseriwa -->
+        <div class="speaker-cardS">
+            <div class="speaker-img-wrapperS">
+                <img src="img/speakers/speaker (7).JPG" alt="Patience Geraldine Tseriwa" class="speaker-imgS">
+            </div>
+            <h3 class="speaker-nameS">Patience Geraldine Tseriwa</h3>
+            <p class="speaker-titleS">Arts & Culture Practitioner | Fashion Creative</p>
+            <button class="bio-btnS" data-name="Patience Geraldine Tseriwa" data-title="Arts & Culture Practitioner | Fashion Creative" data-img="img/speakers/speaker (7).JPG" data-bio="Patience Geraldine Tseriwa is an arts and culture practitioner, fashion creative, and project coordinator with a love for bringing people, ideas, and creativity together. She is passionate about creating spaces where artists and communities can learn from one another, collaborate, and explore new possibilities.
+
+            She's fascinated by how the mind works and is especially interested in how creativity shapes the way we learn, solve problems, and understand ourselves. Lately, she's been curious about how children can discover their natural strengths early and be given the freedom to grow into them.
+
+            At the heart of it all, she is happiest in spaces where people are free to be curious, create together, and discover things they didn't know about themselves.">Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i></button>
+        </div>
+
+        <!-- Card 5: Wynona Mutisi -->
+        <div class="speaker-cardS">
+            <div class="speaker-img-wrapperS">
+                <img src="img/speakers/speaker (11).JPG" alt="Wynona Mutisi" class="speaker-imgS">
+            </div>
+            <h3 class="speaker-nameS">Wynona Mutisi</h3>
+            <p class="speaker-titleS">Award-Winning Illustrator & Art Director</p>
+            <button class="bio-btnS" data-name="Wynona Mutisi" data-title="Award-Winning Illustrator & Art Director" data-img="img/speakers/speaker (11).JPG" data-bio="Wynona Mutisi is a Harare-based award-winning illustrator. She has a background in fine art specialising in printmaking, digital art and bookbinding. Mutisi works for a pan African newspaper called The Continent as an illustrator, layout designer and art director. 
+
+            Her practice is largely a mix of slice of life illustrative work and visual journalism using colour to convey beauty in mundane things. Outside of the newspaper, Mutisi’s work includes projects with global institutions and newsrooms such as Konrad Adenauer Stiftung, Global Press Journal, Oxford Brookes Poetry Centre and Tufts University. When she is not making art, Mutisi enjoys writing about art and visual culture in Africa.">Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i></button>
+        </div>
+
+        <!-- Card 6: Terri ‘Nasherua’ Nderitu -->
+        <div class="speaker-cardS">
+            <div class="speaker-img-wrapperS">
+                <img src="img/speakers/speaker (3).JPG" alt="Terri ‘Nasherua’ Nderitu" class="speaker-imgS">
+            </div>
+            <h3 class="speaker-nameS">Terri ‘Nasherua’ Nderitu</h3>
+            <p class="speaker-titleS">Community Development Practitioner & Educator</p>
+            <button class="bio-btnS" data-name="Terri ‘Nasherua’ Nderitu" data-title="Community Development Practitioner & Educator" data-img="img/speakers/speaker (3).JPG" data-bio="Terri Nasherua Nderitu is an entrepreneur, advocate, educator, community development practitioner, and passionate supporter for indigenous knowledge systems, with over 22 years of work alongside nomadic pastoralist communities across Kenya. For the last four and a half years, her practice has been rooted in Samburu and Marsabit - listening, learning, and building community-led initiatives that take their cues from the people and landscapes they serve.
+
+            She is an educator whose work in the field led her to discover a deep resonance with Montessori principles - a recognition that what she had long witnessed in pastoralist communities and what Montessori named were, at their heart, the same thing: that the most sophisticated frameworks for human learning are already alive in the way pastoralist communities raise their children.
+
+            Her work spans entrepreneurship, education, livelihoods, and indigenous knowledge - including a deep engagement with camel pastoralism, where the communities she works with thrive.">Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i></button>
+        </div>
+
+        <!-- Card 7: Jacqui Miller -->
+        <div class="speaker-cardS">
+            <div class="speaker-img-wrapperS">
+                <img src="img/speakers/speaker (5).JPG" alt="Jacqui Miller" class="speaker-imgS">
+            </div>
+            <h3 class="speaker-nameS">Jacqui Miller</h3>
+            <p class="speaker-titleS">Educational Architect & Systems Designer</p>
+            <button class="bio-btnS" data-name="Jacqui Miller" data-title="Educational Architect & Systems Designer" data-img="img/speakers/speaker (5).JPG" data-bio="Jacqui Miller’s Montessori journey began when she completed her AMI Elementary training in the early 1990s and taught at an Afrocentric Montessori school in East Point, Georgia, for four years. For the next 16 years, Jacqui worked collaboratively to develop a robust adolescent program in Decatur, Georgia, and served as an adolescent guide. 
+
+            She contributed to the NAMTA/AMI Orientation to Adolescent Studies as a presenter and design coach for 10 years. In 2015, Jacqui became the Founding Principal of a public charter school in Cleveland, Ohio. From 2020-2025 she served the Cleveland Metropolitan School District as Director of Montessori Programming and Operations.
+
+            Jacqui identifies as an educational architect, envisioning Montessori beyond its current reality and designing systemic change toward a vision. Her current work focuses on transformative learning for adults, children and communities through public sector initiatives that go beyond school and into community structures for human flourishing.">Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i></button>
+        </div>
+
+        <!-- Card 8: Founder of Bricks Montessori -->
+        <div class="speaker-cardS">
+            <div class="speaker-img-wrapperS">
+                <img src="img/speakers/speaker (8).JPG" alt="Bricks Montessori Founder" class="speaker-imgS">
+            </div>
+            <h3 class="speaker-nameS">Bricks Montessori Founder</h3>
+            <p class="speaker-titleS">Founder | Bricks Montessori School Madagascar</p>
+            <button class="bio-btnS" data-name="Bricks Montessori Founder" data-title="Founder | Bricks Montessori School Madagascar" data-img="img/speakers/speaker (8).JPG" data-bio="As the Founder of Bricks Montessori School, I am passionate about creating meaningful learning experiences for children. Trained in Montessori education, I work to foster curiosity, independence, and a lifelong love of learning through child-centered environments, educational projects, and community initiatives. 
+
+            I am also deeply involved in developing didactic materials and supporting educational programs that expand access to quality learning opportunities across Madagascar.">Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i></button>
+        </div>
+
+        <!-- Card 9: Tendai “Sokostina” Garwe -->
+        <div class="speaker-cardS">
+            <div class="speaker-img-wrapperS">
+                <img src="img/speakers/speaker (16).JPG" alt="Tendai “Sokostina” Garwe" class="speaker-imgS">
+            </div>
+            <h3 class="speaker-nameS">Tendai “Sokostina” Garwe</h3>
+            <p class="speaker-titleS">Cultural Storyteller & Social Commentator</p>
+            <button class="bio-btnS" data-name="Tendai “Sokostina” Garwe" data-title="Cultural Storyteller & Social Commentator" data-img="img/speakers/speaker (16).JPG" data-bio="Tendai “Sokostina” Garwe is a Zimbabwean cultural storyteller, creative, and social commentator whose voice has become a powerful bridge between tradition, identity, and contemporary African life. Known for her wit, depth, and unapologetic celebration of African heritage, Sokostina has built a reputation for provoking thought while preserving the wisdom embedded in everyday African experiences.
+
+            Through her work in media, storytelling, and public engagement, she has challenged dominant narratives about culture, masculinity, community, and belonging, offering fresh and deeply rooted perspectives on what it means to be African in a rapidly changing world.
+
+            At AFMOCON 2026, under the theme The Rise of the Outliers: Celebrating New Heroes in Education, Sokostina brings her unique lens on culture, identity, and intergenerational wisdom, inviting us to rethink education not only as schooling, but as the living transmission of values, memory, and humanity.">Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i></button>
+        </div>
+
+        <!-- Card 10: Kudzai-Vimbiso Tseriwa -->
+        <div class="speaker-cardS">
+            <div class="speaker-img-wrapperS">
+                <img src="img/speakers/speaker (2).JPG" alt="Kudzai-Vimbiso Tseriwa" class="speaker-imgS">
+            </div>
+            <h3 class="speaker-nameS">Kudzai-Vimbiso Tseriwa</h3>
+            <p class="speaker-titleS">Child Protection Programmes Manager | CESVI</p>
+            <button class="bio-btnS" data-name="Kudzai-Vimbiso Tseriwa" data-title="Child Protection Programmes Manager | CESVI" data-img="img/speakers/speaker (2).JPG" data-bio="Kudzai-Vimbiso Tseriwa is a Zimbabwean social worker, child safeguarding and protection specialist with over 12 years of national, regional and global experience working to strengthen the wellbeing of children and families through community-based systems, child-centred programmes and global advocacy. Her work focuses on supporting the environments in which children grow, develop and learn and strengthening the systems around children—bridging schools, families, and communities to promote safe, nurturing environments that foster healthy social and emotional development, and enable children to reach their full potential.
+
+            She currently serves as the Child Protection Programmes Manager for CESVI Zimbabwe, an International Non-Governmental Organisation headquartered in Italy. She is also the Founder of Izwi, a local organization that seeks to promote child-friendly and age appropriate information packages and the meaningful participation of children on matters that concern them across different levels, from local to global stages. She is passionate about creating living and learning spaces that are supportive and responsive to the needs of children and nurtures their healthy growth and enables them to thrive.">Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i></button>
+        </div>
+
+        <!-- Card 11: Elton Ndudzo -->
+        <div class="speaker-cardS">
+            <div class="speaker-img-wrapperS">
+                <img src="img/speakers/speaker (14).jpg" alt="Elton Ndudzo" class="speaker-imgS">
+            </div>
+            <h3 class="speaker-nameS">Elton Ndudzo</h3>
+            <p class="speaker-titleS">Author & Computer Engineering Student</p>
+            <button class="bio-btnS" data-name="Elton Ndudzo" data-title="Author & Computer Engineering Student" data-img="img/speakers/speaker (14).JPG" data-bio="Elton Ndudzo is a Zimbabwean writer exploring history, identity, and the quiet complexities of becoming. His debut novel, Charwe, reimagines the life of Nehanda Charwe Nyakasikana, reflecting his enduring interest in belonging, spirituality, and self-discovery. 
+
+            In tandem with his literary pursuits, he is currently a Computer Engineering student at Chinhoyi University of Technology.">Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i></button>
+        </div>
+
+       <!-- Card 12: Robin Truesdale -->
+<div class="speaker-cardS">
+    <div class="speaker-img-wrapperS">
+        <img src="img/speakers/speaker (6).JPG" alt="Robin Truesdale" class="speaker-imgS">
+    </div>
+    <h3 class="speaker-nameS">Robin Truesdale</h3>
+    <p class="speaker-titleS">Documentary Filmmaker</p>
+    <button class="bio-btnS" 
+            data-name="Robin Truesdale" 
+            data-title="Documentary Filmmaker" 
+            data-img="img/speakers/speaker (6).JPG" 
+            data-link="https://robintruesdale.com/"
+            data-bio="Robin Truesdale has spent her career as a documentary filmmaker. Her work embodies film’s powerful potential to communicate stories about people, cultures, and humanitarian issues. In 2006, she traveled from the US to Zimbabwe to film rural life in Mhondoro for a non-profit organization. It was there that she met Tatenda Muchiriri. Tatenda’s enthusiasm for education and equality inspired her to seek National Geographic funding for an independent documentary film about him, and in 2007 she returned to Zimbabwe for production. Together, Robin and Tatenda created the film “Tumbuka - Bloom” and began a lifelong friendship.
+
+            In 2024, Robin decided to retire and make a major move from the United States to a rural fishing village in Northern Spain. She chose Spain because of her love of long distance walking, having walked more than 2000 kilometers through Spanish villages and countryside on the Camino de Santiago, a series of centuries-old pilgrimage routes. Becoming an immigrant in a foreign land has been a challenging and humbling experience as she navigates a new language and culture.
+
+            Robin's return to Zimbabwe in 2026 marks the 20th anniversary of meeting Tatenda, an event that changed both of their lives immeasurably!">
+        Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i>
+    </button>
+</div>
+
+        <!-- Card 13: Sharleen Machipisa -->
+        <div class="speaker-cardS">
+            <div class="speaker-img-wrapperS">
+                <img src="img/speakers/speaker (10).JPG" alt="Sharleen Machipisa" class="speaker-imgS">
+            </div>
+            <h3 class="speaker-nameS">Sharleen Machipisa</h3>
+            <p class="speaker-titleS">Computer Scientist & Co-Founder | Zama AI</p>
+            <button class="bio-btnS" data-name="Sharleen Machipisa" data-title="Computer Scientist & Co-Founder | Zama AI" data-img="img/speakers/speaker (10).JPG" data-bio="Sharleen Machipisa (nee Bwakura) is a co-founder of Chipochahse and Zama AI and a skilled computer scientist. As a recipient of the prestigious Joshua Nkomo Scholarship for Academic Excellence, her commitment to education and empowerment is evident. Sharleen is passionate about empowering women and girls, demonstrated through her work with the Women Empowerment Initiative, where she helps women develop skills in various areas, including arts and crafts, sewing, and agriculture.
+
+            Sharleen's experience as a facilitator at TheirWorld, where she trained girls in coding, has been instrumental in shaping her approach to building learning at Chipochashe. As a social entrepreneur, she leads operations at the schools and serves as a role model for the girls, inspiring them to pursue their dreams.
+
+            Sharleen's dedication to Chipochashe is deeply rooted in her personal experiences, having lost her father at a young age and overcoming adversity through her determination for academic excellence.">Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i></button>
+        </div>
+
+        <!-- Card 14: Moses Machipisa -->
+        <div class="speaker-cardS">
+            <div class="speaker-img-wrapperS">
+                <img src="img/speakers/speaker (1).JPG" alt="Moses Machipisa" class="speaker-imgS">
+            </div>
+            <h3 class="speaker-nameS">Moses Machipisa</h3>
+            <p class="speaker-titleS">Co-Founder | Zama AI & Chipochashe</p>
+            <button class="bio-btnS" data-name="Moses Machipisa" data-title="Co-Founder | Zama AI & Chipochashe" data-img="img/speakers/speaker (1).JPG" data-bio="Moses Machipisa is a passionate educator, servant leader, and co-founder of Zama AI, an innovative learning platform, and Chipochashe, a rural school in Dema, Zimbabwe, committed to transforming lives through quality education and community development. A recipient of the Capernaum Scholarship, he has dedicated his career to expanding access to excellent education and creating opportunities for young people to realize their full potential.
+
+            Moses serves as a trustee of the Charter for Compassion, where he advances compassionate leadership and global citizenship. He is also a passionate advocate of Ubuntu—the African philosophy that recognizes our shared humanity and interconnectedness. His work is guided by the conviction that education should cultivate not only academic excellence but also character, purpose, and a commitment to serving others.
+
+            His work through Chipochashe was featured in the award-winning documentary The Spirit of Ubuntu, highlighting the school's innovative approach to education and community transformation. At Chipochashe, Moses leads strategic partnerships and institutional development, working with local and international collaborators to build sustainable systems, strengthen educational excellence, and expand opportunities for rural communities.
+
+            Through his work, Moses seeks to demonstrate that exceptional educational outcomes are not defined by geography or resources alone, but by vision, intentional leadership, and a culture of excellence.">Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i></button>
+        </div>
+
+        <!-- Card 15: Decolonized Faith Educator -->
+        <div class="speaker-cardS">
+            <div class="speaker-img-wrapperS">
+                <img src="img/speakers/speaker (17).JPG" alt="Spiritual & Cultural Educator" class="speaker-imgS">
+            </div>
+            <h3 class="speaker-nameS">Tapiwa</h3>
+            <p class="speaker-titleS">Seasoned Educator & Cultural Historian</p>
+            <button class="bio-btnS" data-name="Tapiwa" data-title="Seasoned Educator & Cultural Historian" data-img="img/speakers/speaker (17).JPG" data-bio="Rooted in the wisdom of the ancestors and anchored in the grace of Christ, I am a believer who sees no conflict between the sacred teachings of our forebears and the transformative power of the gospel.
+
+            My work bridges indigenous knowledge systems with a living Christian faith that honors culture rather than erasing it. My mission is to decolonize faith, reclaim ancestral memory, and build liberated minds that walk in both spiritual authority and cultural dignity. I serve as a seasoned educator operating across both the secular and the religious worlds.">Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i></button>
+        </div>
+
+        <!-- Card 16: Lisa Simoneau -->
+        <div class="speaker-cardS">
+            <div class="speaker-img-wrapperS">
+                <img src="img/speakers/speaker (9).JPG" alt="Lisa Simoneau" class="speaker-imgS">
+            </div>
+            <h3 class="speaker-nameS">Lisa Simoneau</h3>
+            <p class="speaker-titleS">Director | Elementary Montessori Teacher Residency</p>
+            <button class="bio-btnS" data-name="Lisa Simoneau" data-title="Director | Elementary Montessori Teacher Residency" data-img="img/speakers/speaker (9).JPG" data-bio="Lisa Simoneau is a Montessori teacher educator, instructional leader, and systems designer with more than thirty years of experience in education and over a decade of Montessori practice across early childhood, elementary, and adolescent programs.
+
+            She currently serves as Director of the Elementary Montessori Teacher Residency and Instructor with the National Center for Montessori in the Public Sector (NCMPS), where she prepares and mentors Montessori educators working in public school settings. Her work includes teacher preparation, instructional coaching, curriculum development, lesson study, album development, and the design of residency-based learning experiences that support adults in translating Montessori theory into responsive classroom practice.
+
+            Lisa holds AMI Elementary (6–12) and AMI Primary (3–6) diplomas and has served as a Montessori guide, inclusion specialist, interventionist, mentor, coach, and teacher educator. Throughout her career she has worked extensively in public Montessori schools, supporting the development of equitable learning environments that honor the unique strengths, needs, and potential of every child.
+
+            Prior to her work in Montessori education, Lisa founded KidLabs, Inc., an educational consulting organization that coordinated hands-on science programming and teacher development across more than sixty community sites. She has also worked in juvenile justice, educational consulting, and equity-focused professional learning, including supporting educators in addressing systemic inequities and creating more inclusive learning communities.
+
+            A central focus of Lisa’s work is the intersection of Montessori pedagogy, authentic inclusion, community partnership, and human development. She is currently developing a framework and implementation guide for Montessori schools seeking to create community-led, culturally sustaining, and culturally revitalizing environments where every child, family, and adult experiences authentic belonging while maintaining fidelity to Montessori principles and meeting government accountability requirements. Her work integrates Montessori education, trauma-informed practice, restorative approaches, inclusive special education, and community voice into a coherent model for educational transformation.
+
+            Lisa believes that education is fundamentally about human development and that schools are at their best when they cultivate agency, interdependence, dignity, and belonging for all members of the community. Through her teaching, coaching, and systems design work, she supports educators and school leaders in creating environments where children and adults can realize their full potential.">Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i></button>
+        </div>
+
+        <!-- Card 17: Tatenda Blessing Muchiriri (Website Owner) -->
+        <div class="speaker-cardS">
+            <div class="speaker-img-wrapperS">
+                <img src="img/speakers/speaker (13).JPG" alt="Tatenda Blessing Muchiriri" class="speaker-imgS">
+            </div>
+            <h3 class="speaker-nameS">Tatenda Blessing Muchiriri</h3>
+            <p class="speaker-titleS">Founder | Montessori on Wheels</p>
+            <button class="bio-btnS" data-name="Tatenda Blessing Muchiriri" data-title="Founder | Montessori on Wheels" data-img="img/speakers/speaker (13).JPG" data-bio="Tatenda Blessing Muchiriri is a dedicated global education pioneer and Montessori practitioner. Deeply committed to social equity and educational access, Tatenda's work centers on creating authentic, Afrocentric, and child-centered spaces that empower children and communities across Zimbabwe and the continent. 
+
+            His tireless advocacy for educational transformation and grassroots empowerment has been recognized internationally, inspiring collaborations and a lifelong mission to show that exceptional educational environments should belong to every child, regardless of circumstance. ">Read Bio <i class="fas fa-chevron-right ml-1" style="font-size: 0.75rem;"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- Global Modal Window Container -->
+<div class="modal-overlayS" id="speakerModal">
+    <div class="modal-contentS">
+        <button class="modal-closeS" id="closeModal">&times;</button>
+        <div class="modal-headerS">
+            <div class="modal-img-wrapperS">
+                <img src="" alt="" id="modalImg" class="modal-imgS">
+            </div>
+            <div class="modal-infoS">
+                <h3 id="modalName"></h3>
+                <p id="modalTitle"></p>
+            </div>
+        </div>
+        <div class="modal-bodyS" id="modalBio"></div>
+    </div>
+</div>
+<!-- ==========================================================================
+     Speakers Section End
+     ========================================================================== -->
+
     <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
   <h2 style="color: #6E4C1E; font-family: 'Georgia', serif; background-color: #F5EBD0; padding: 20px; border-radius: 12px; max-width: 700px;">
     Moments from <span style="font-family: 'Pacifico';">afmocon </span>2025 
@@ -989,163 +1495,13 @@ AFMOCON 2026 is a gathering created to bring these outliers into conversation �
     </div>
   </div>
   
-  <div style="margin-top:0.6rem; font-size:20px; color:black; text-align:center; 
-              line-height:1.3; font-family:Georgia,'Times New Roman',Times,serif;">
-    The full programme will be released closer to the conference date.
-  </div>
-</div>
-
-
-        <!---
-        <div class="controlsHH">
-            <div class="nav-buttonsHH">
-                <button class="nav-btnHH prev-btnHH" style="background-color: #355E3B;">&#9664;</button>
-                <button class="nav-btnHH next-btnHH" style="background-color: #355E3B;">&#9654;</button>
-            </div>
-        </div>
-
-        <div class="carousel-containerHH">
-            <div class="carouselHH">
-                <div class="carousel-slideHH">
-                    <div class="day-headerHH">
-                        <div class="day-titleHH">Day 1: <span style="font-family: 'Pacifico';">Leadership Day</span> </div>
-                    </div>
-
-                    <div class="audience-sectionHH">
-                        <div class="section-titleHH">Target Audience:</div>
-                        <p>Government representatives, education policymakers, NGOs, and school leaders.</p>
-                    </div>
-
-                    <div class="content-gridHH">
-                        <div class="content-cellHH">
-                            <div class="section-titleHH">Features:</div>
-                            <ul class="feature-listHH">
-                                <li><strong>Keynote Address:</strong> The Transformative Power of Montessori Education for Africa's Future.</li>
-                                <li><strong>Launch of Research Outputs:</strong> AMH Researchers</li>
-                                <li><strong>Roundtable Dialogue:</strong> Collaborative session with government representatives to explore policies supporting Montessori adoption and integration. </li>
-                                <li><strong>Networking Dinner:</strong> Opportunities for stakeholders to connect.  </li>
-                                
-                            </ul>
-                        </div>
-
-                        <div class="content-cellHH">
-                            <div class="section-titleHH">Format:</div>
-                            <ol class="format-listHH">
-                                <li>Arrival and registration</li>
-                                <li>Opening performance (school play/African dance group)</li>
-                                <li>Welcome remarks and introductions (Mako)</li>
-                                <li>Welcome Speech - The Transformative Power of Montessori Education for Africa's Future (Fatenda)</li>
-                                <li>Poetry performance / video screening relevant to the theme of 'the power of play in African education'</li>
-                                <li>Keynote from Govt Representative</li>
-                                <li>Keynote from Keynote Speaker 1</li>
-                                <li>Q&A</li>
-                                <li>BREAK</li>
-                                <li>Roundtable Dialogue - Blending Montessori with National Curricula: A Pathway to Innovation</li>
-                                <li>Research Outputs Presentation  - Dr Mahere and Prof Hapanyengwi</li>
-                                <li>LUNCH</li>
-                                <li>People break for lunch and go prepare for the Networking Dinner</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Day 2 
-                <div class="carousel-slideHH">
-                  <div class="day-headerHH">
-                      <div class="day-titleHH">Day 2: <span style="font-family: 'Pacifico';">Learning Day</span></div>
-                  </div>
-                  
-                  <div class="audience-sectionHH">
-                      <div class="section-titleHH">Target Audience:</div>
-                      <p>Montessori guides, teachers, researchers, and learners.</p>
-                  </div>
-                  
-                  <div class="content-gridHH">
-                      <div class="content-cellHH">
-                          <div class="section-titleHH">Features:</div>
-                          <ul class="feature-listHH">
-                              <li>
-                                  <strong>Workshops:</strong> Hands-on sessions focused on Montessori materials, child development, and classroom management.
-                              </li>
-                              <li>
-                                  <strong>Marketplace of Ideas:</strong> Exhibition booths featuring Montessori materials, resources, and innovations in education.
-                              </li>
-                              <li>
-                                <strong>Innovation Research Lab:</strong> session  showcasing studies on innovation in education in Africa and globally. 
-                              </li>
-                          </ul>
-                      </div>
-                      
-                      <div class="content-cellHH">
-                          <div class="section-titleHH">Workshop Topics:</div>
-                          <p>A cornucopia of 3-4 workshops offering distinct topics that will explore different topics of interest:</p>
-                          <ol class="format-listHH">
-                              <li>A topic on play and child development</li>
-                              <li>A topic on the deeper meanings of the Montessori materials</li>
-                              <li>A topic on protecting children in play spaces</li>
-                              <li>A topic on innovation in education</li>
-                          </ol>
-                      </div>
-                      
-                      <div class="content-cellHH">
-                          <div class="section-titleHH">Exhibition:</div>
-                          <p>Bippers Exhibits and other exhibitors showcasing Montessori materials, resources, and innovations in education.</p>
-                      </div>
-                  </div>
-              </div>
-              
-              <!-- Day 3 
-              <div class="carousel-slideHH">
-                  <div class="day-headerHH">
-                      <div class="day-titleHH">Day 3: <span style="font-family: 'Pacifico';">Day-Dreaming Day</span></div>
-                  </div>
-                  
-                  <div class="audience-sectionHH">
-                      <div class="section-titleHH">Target Audience:</div>
-                      <p>All participants, with a focus on celebrating success and envisioning the future.</p>
-                  </div>
-                  
-                  <div class="content-gridHH">
-                      <div class="content-cellHH">
-                          <div class="section-titleHH">Features:</div>
-                          <ul class="feature-listHH">
-                              <li>
-                                  <strong>TED-Style Talks:</strong> Inspiring presentations from African and global leaders, educators, and innovators.
-                              </li>
-                              <li>
-                                  <strong>Brainstorming Session:</strong> Collaborative ideation on scaling Montessori education and addressing challenges in implementation.
-                              </li>
-                              <li>
-                                  <strong>Awards Ceremony:</strong> Recognizing individuals, schools, and organizations for their contributions to Montessori education in Africa. 
-                              </li>
-                              <li>
-                                <strong>Closing Session:</strong> The Future of Montessori in Africa: Collective Vision and Commitment
-                              </li>
-                          </ul>
-                      </div>
-                      
-                      <div class="content-cellHH">
-                          <div class="section-titleHH">Speakers:</div>
-                          <p>Proposed speakers include Nicole Bergeron, Dr Ayize, Vee Kativhu and others who will share inspiring presentations on Montessori education and its impact.</p>
-                      </div>
-                      
-                      <div class="content-cellHH">
-                          <div class="section-titleHH">Collaborative Session:</div>
-                          <p>A co-creation session for the most pressing challenges teachers are facing, with a focus on developing actionable solutions and future initiatives.</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          
-            </div>
-
-            <div class="carousel-indicatorsHH">
-                <div class="indicatorHH active" data-index="0"></div>
-                <div class="indicatorHH" data-index="1"></div>
-                <div class="indicatorHH" data-index="2"></div>
-            </div>
-        </div> -->
+    <div style="margin-top:0.6rem; font-size:20px; color:black; text-align:center; 
+                line-height:1.3; font-family:Georgia,'Times New Roman',Times,serif;">
+        The full programme will be released closer to the conference date.
     </div>
+    </div>
+
+    </div>  
 
 
 
@@ -1330,6 +1686,74 @@ AFMOCON 2026 is a gathering created to bring these outliers into conversation �
                 });
             }
         });
+
+       // ==========================================================================
+// Speaker Profile Modal Dynamic Scripting
+// ==========================================================================
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('speakerModal');
+    const closeBtn = document.getElementById('closeModal');
+    
+    const modalImg = document.getElementById('modalImg');
+    const modalName = document.getElementById('modalName');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBio = document.getElementById('modalBio');
+
+   document.querySelectorAll('.bio-btnS').forEach(button => {
+    button.addEventListener('click', function () {
+        const name = this.getAttribute('data-name');
+        const title = this.getAttribute('data-title');
+        const img = this.getAttribute('data-img');
+        const bio = this.getAttribute('data-bio');
+        const externalLink = this.getAttribute('data-link'); // Grab the link value
+
+        modalName.textContent = name;
+        modalTitle.textContent = title;
+        modalImg.src = img;
+        modalImg.alt = name;
+        
+        // Render the core biography narrative
+        modalBio.textContent = bio;
+
+        // If a valid link exists, cleanly append it to the body block
+        if (externalLink) {
+            const linkContainer = document.createElement('p');
+            linkContainer.style.marginTop = '1.5rem';
+            linkContainer.style.borderTop = '1px dashed #edf2f7';
+            linkContainer.style.paddingTop = '1rem';
+            
+            linkContainer.innerHTML = `
+                <strong>Website:</strong> 
+                <a href="${externalLink}" target="_blank" rel="noopener noreferrer" style="color: #355E3B; font-weight: 600; text-decoration: underline;">
+                    ${externalLink} <i class="fas fa-external-link-alt" style="font-size: 0.8rem; margin-left: 4px;"></i>
+                </a>`;
+            modalBio.appendChild(linkContainer);
+        }
+
+        modal.classList.add('activeS');
+        document.body.style.overflow = 'hidden'; 
+    });
+});
+
+    closeBtn.addEventListener('click', closeModalWindow);
+
+    modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+            closeModalWindow();
+        }
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('activeS')) {
+            closeModalWindow();
+        }
+    });
+
+    function closeModalWindow() {
+        modal.classList.remove('activeS');
+        document.body.style.overflow = ''; 
+    }
+});
     
   </script>
 </body>
