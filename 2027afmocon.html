@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#18271b" />
+  <meta name="description" content="AFMOCON 2027 — The Child at the Center: Power, Identity, Possibility. A Pan-African gathering for Montessori educators, parents and changemakers in Zimbabwe." />
+  <title>AFMOCON 2027 | The Child at the Center</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --forest: #355E3B;
+      --forest-deep: #18271b;
+      --forest-mid: #294a31;
+      --gold: #E1B534;
+      --gold-soft: #F3D873;
+      --copper: #B87333;
+      --cream: #F5EBD0;
+      --paper: #FBF8F0;
+      --ink: #191713;
+      --brown: #6E4C1E;
+      --muted: #6E6A62;
+      --white: #FFFFFF;
+      --line: rgba(25, 23, 19, .14);
+      --shadow: 0 26px 70px rgba(18, 31, 21, .14);
+      --radius-lg: 32px;
+      --radius-md: 22px;
+      --radius-sm: 14px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      overflow-x: hidden;
+    }
+    body.nav-open { overflow: hidden; }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    button, input, textarea { font: inherit; }
+    ::selection { background: var(--gold); color: var(--forest-deep); }
+
+    .container {
+      width: min(var(--max), calc(100% - 96px));
+      margin-inline: auto;
+    }
+    .section { padding: 120px 0; position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--brown);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-weight: 800;
+      font-size: 1.04rem;
+    }
+    .eyebrow::before { content: ''; width: 36px; height: 2px; background: var(--gold); }
+    .display {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: -.03em;
+      line-height: .94;
+    }
+    .script { font-family: 'Pacifico', cursive; font-weight: 400; }
+
+    /* NAV */
+    .site-nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 1000;
+      color: white;
+      transition: background .35s ease, box-shadow .35s ease, backdrop-filter .35s ease;
+    }
+    .site-nav.scrolled {
+      background: rgba(24, 39, 27, .94);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    }
+    .nav-inner {
+      width: min(1380px, calc(100% - 40px));
+      margin: auto;
+      min-height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand img {
+    width: 125px;
+    height: 115px;
+    object-fit: contain;
+}
+    .brand-copy { display: grid; line-height: 1.05; }
+    .brand-copy strong { font-family: 'Oswald'; font-size: 1.16rem; letter-spacing: .08em; }
+    .brand-copy span { font-size: .68rem; text-transform: uppercase; letter-spacing: .17em; opacity: .74; margin-top: 5px; }
+    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .nav-links a {color: var(--gold); text-decoration: none; font-size: 1.12rem; font-weight: 600; opacity: .9; transition: opacity .2s; }
+    .nav-links a:hover { opacity: 1; }
+    .nav-cta { border: 1px solid rgba(255,255,255,.45); padding: 11px 18px; border-radius: 999px; }
+    .menu-btn { display: none; width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,.35); background: transparent; color: white; cursor: pointer; }
+
+    /* HERO */
+    .hero {
+      min-height: 100svh;
+      background: var(--forest-deep);
+      color: white;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: .055;
+      background-image:
+        linear-gradient(45deg, transparent 48%, white 49%, white 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, white 49%, white 51%, transparent 52%);
+      background-size: 24px 24px;
+      mask-image: linear-gradient(to right, black, transparent 70%);
+    }
+    .hero-grid { min-height: 100svh; display: grid; grid-template-columns: 1.02fr .98fr; }
+    .hero-copy {
+      padding: 158px clamp(32px, 6vw, 90px) 80px max(24px, calc((100vw - 1380px)/2 + 20px));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-kicker {
+      font-family: 'Oswald';
+      color: var(--gold);
+      font-size: clamp(1.25rem, 2.1vw, 2rem);
+      letter-spacing: .1em;
+      margin-bottom: 12px;
+    }
+    .hero-subkicker {
+      font-size: .78rem;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      font-weight: 700;
+      opacity: .82;
+      margin-bottom: 42px;
+    }
+    .hero-title { font-size: clamp(4.5rem, 9vw, 8.4rem); max-width: 700px; }
+    .hero-title .center-line { color: white; }
+    .hero-title .gold { color: var(--gold); }
+    .hero-tagline {
+      margin-top: 22px;
+      color: var(--gold-soft);
+      font-family: 'Oswald';
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: clamp(1rem, 1.5vw, 1.35rem);
+    }
+    .hero-rule { width: min(450px, 85%); height: 2px; background: rgba(255,255,255,.82); margin: 24px 0 26px; transform-origin: left; animation: ruleIn 1s .35s both; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 14px 24px; font-size: 1.23rem; color: rgba(255,255,255,.84); }
+    .hero-meta strong { color: white; }
+    .hero-actions { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: .86rem;
+      letter-spacing: .035em;
+      transition: transform .25s ease, background .25s ease, color .25s ease, border .25s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-gold {font-size:1.3rem;  background: var(--gold); color: var(--forest-deep); }
+    .btn-ghost {font-size:1.3rem;  border: 1px solid rgba(255,255,255,.45); color: white; }
+    .btn-dark { background: var(--forest-deep); color: white; font-size: 1.3rem; }
+
+    .hero-art { position: relative; min-height: 100svh; overflow: hidden; }
+    .hero-photo {
+      position: absolute;
+      inset: 0;
+      background-image: url('img/afmocon-landing-2027.png');
+      background-size: cover;
+      background-position: 74% center;
+      transform: scale(1.03);
+      animation: heroZoom 7s ease-out both;
+    }
+    .hero-art::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(90deg, var(--forest-deep) 0%, rgba(24,39,27,.55) 10%, rgba(24,39,27,.04) 36%, rgba(24,39,27,.05) 100%);
+    }
+    .hero-art::after {
+      content: '';
+      position: absolute;
+      inset: auto 0 0;
+      height: 30%;
+      z-index: 1;
+      background: linear-gradient(transparent, rgba(24,39,27,.68));
+    }
+    .hero-badge {
+      position: absolute;
+      right: 34px;
+      bottom: 34px;
+      z-index: 2;
+      max-width: 290px;
+      border: 1px solid rgba(255,255,255,.4);
+      background: rgba(24,39,27,.42);
+      backdrop-filter: blur(10px);
+      border-radius: 18px;
+      padding: 18px 20px;
+    }
+    .hero-badge small { display: block; font-size: .66rem; text-transform: uppercase; letter-spacing: .18em; opacity: .72; margin-bottom: 6px; }
+    .hero-badge strong { font-family: 'Oswald'; font-size: 1.42rem; text-transform: uppercase; letter-spacing: .02em; }
+
+    .scroll-cue {
+      position: absolute;
+      left: 28px;
+      bottom: 26px;
+      z-index: 3;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .62rem;
+      opacity: .58;
+    }
+
+    /* WIDER POST-HERO CONTENT
+       Keeps the landing page/nav/footer styling intact while giving the
+       main AFMOCON content more horizontal room and easier-to-read type. */
+    main > .section .container,
+    main > .final-cta .container {
+      width: min(1380px, calc(100% - 56px));
+      margin-inline: auto;
+    }
+
+    main > .section {
+      padding-top: 132px;
+      padding-bottom: 132px;
+    }
+
+    .intro-copy p { font-size: 5.18rem; }
+    .section-head p { font-size: 1.08rem; max-width: 500px; }
+    .theme-card p { font-size: 1.03rem; max-width: 360px; }
+    .journey-stop p { font-size: 1.03rem; max-width: 360px; }
+    .engage-title p { font-size: 1.12rem; }
+    .track-card li { font-size: 1.04rem; }
+    .criterion p { font-size: 1.02rem; }
+    .submit-item p { font-size: 1rem; }
+    .date-event { font-size: 1.62rem; }
+    .date-place { font-size: 2rem; }
+    .final-cta p { font-size: 1.12rem; max-width: 680px; }
+
+    /* INTRO */
+    .intro { background: var(--cream); }
+    .intro-grid { display: grid; grid-template-columns: .78fr 1.22fr; gap: 84px; align-items: start; }
+    .intro h2 { font-size: clamp(3.8rem, 7vw, 7.3rem); color: var(--forest-deep); }
+    .intro h2 em { color: var(--gold); font-style: normal; }
+    .intro-copy { padding-top: 22px; }
+    .intro-copy p { color: #4f4a42; line-height: 1.85; font-size: 1.42rem; margin-bottom: 22px; }
+    .intro-quote {
+      margin-top: 38px;
+      padding: 26px 0 0 26px;
+      border-left: 3px solid var(--gold);
+      color: var(--forest);
+      font-family: 'Oswald';
+      font-size: clamp(1.45rem, 2.4vw, 2.2rem);
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    /* THEME */
+    .theme-section { background: var(--paper); }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 58px; }
+    .section-head h2 { font-size: clamp(3.2rem, 6vw, 6rem); color: var(--forest-deep); max-width: 760px; }
+    .section-head p { max-width: 420px; color: var(--muted); line-height: 1.7; }
+    .theme-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .theme-card { min-height: 410px; padding: 42px 34px; position: relative; border-right: 1px solid var(--line); overflow: hidden; transition: background .35s ease, color .35s ease; }
+    .theme-card:last-child { border-right: 0; }
+    .theme-card:hover { background: var(--forest-deep); color: white; }
+    .theme-num { font-family: 'Oswald'; font-size: .85rem; letter-spacing: .18em; color: var(--gold); }
+    .theme-card h3 { margin-top: 84px; font-size: clamp(2.6rem, 4vw, 4.3rem); }
+    .theme-card p { margin-top: 24px; max-width: 300px; line-height: 1.7; color: var(--muted); }
+    .theme-card:hover p { color: rgba(255,255,255,.7); }
+    .theme-dot { position: absolute; width: 140px; height: 140px; border-radius: 50%; border: 1px solid rgba(225,181,52,.45); right: -55px; top: 28px; }
+
+    /* JOURNEY */
+    .journey { background: var(--forest-deep); color: white; overflow: hidden; }
+    .journey::before { content:''; position:absolute; width:540px; height:540px; border:1px solid rgba(225,181,52,.18); border-radius:50%; right:-140px; top:-160px; box-shadow: 0 0 0 100px rgba(225,181,52,.03), 0 0 0 200px rgba(225,181,52,.02); }
+    .journey .section-head h2 { color: white; }
+    .journey .section-head p { color: rgba(255,255,255,.64); }
+    .journey-track { display: grid; grid-template-columns: repeat(3, 1fr); position: relative; margin-top: 64px; }
+    .journey-track::before { content:''; position:absolute; left: 8%; right: 8%; top: 18px; height:1px; background: rgba(255,255,255,.24); }
+    .journey-stop { position: relative; padding: 60px 44px 0 0; }
+    .journey-stop::before { content:''; position:absolute; top:10px; left:0; width:16px; height:16px; background: var(--gold); border:5px solid var(--forest-deep); outline:1px solid rgba(255,255,255,.5); border-radius:50%; z-index:2; }
+    .journey-date { color: var(--gold); font-family:'Oswald'; font-size:1.1rem; letter-spacing:.09em; }
+    .journey-stop h3 { font-size: clamp(2.8rem, 5vw, 5rem); margin-top: 8px; }
+    .journey-stop .place { text-transform: uppercase; letter-spacing: .13em; font-weight: 800; font-size: .73rem; opacity: .62; margin-top: 4px; }
+    .journey-stop p { margin-top: 24px; max-width: 310px; color: rgba(255,255,255,.68); line-height: 1.75; }
+
+    /* CALL FOR PROPOSALS */
+    .engage { background: var(--paper); }
+    .engage-title { display: grid; grid-template-columns: 1.08fr .92fr; gap: 70px; align-items: end; margin-bottom: 52px; }
+    .engage-title h2 { font-size: clamp(4rem, 8vw, 8.2rem); color: var(--forest-deep); }
+    .engage-title p { color: var(--muted); line-height: 1.8; font-size: 1.03rem; }
+    .track-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .track-card {
+      position: relative;
+      min-height: 520px;
+      border-radius: var(--radius-lg);
+      padding: 44px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .track-card.workshops { background: var(--forest); color: white; }
+    .track-card.posters { background: var(--gold); color: var(--forest-deep); }
+    .track-letter { font-family:'Oswald'; font-size: 7rem; line-height:.75; opacity:.16; position:absolute; right:24px; top:28px; }
+    .track-card h3 { font-size: clamp(3rem, 5vw, 5rem); position: relative; }
+    .track-card ul { list-style: none; display: grid; gap: 14px; margin-top: 38px; position: relative; }
+    .track-card li { display: flex; gap: 12px; line-height:1.5; }
+    .track-card li::before { content:'→'; font-weight:900; }
+    .track-note { border-top:1px solid currentColor; padding-top:22px; margin-top:34px; opacity:.78; font-size:.86rem; text-transform:uppercase; letter-spacing:.08em; }
+
+    /* CRITERIA */
+    .criteria { background: var(--cream); }
+    .criteria-grid { margin-top: 54px; display:grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(25,23,19,.11); border:1px solid rgba(25,23,19,.11); }
+    .criterion { background: var(--cream); padding: 36px 26px 42px; min-height: 280px; }
+    .criterion span { font-family:'Oswald'; color: var(--gold); font-size: 1.18rem; letter-spacing: .14em; }
+    .criterion h3 { margin-top: 58px; font-family:'Oswald'; text-transform:uppercase; font-size:1.55rem; color:var(--forest-deep); }
+    .criterion p { margin-top:16px; color:var(--muted); line-height:1.65; font-size: 1.3rem; }
+
+    /* SUBMIT */
+    .submit-section { background: var(--forest); color: white; }
+    .submit-grid { display:grid; grid-template-columns: .92fr 1.08fr; gap:88px; align-items:start; }
+    .submit-grid h2 { font-size: clamp(4.1rem, 8vw, 8rem); }
+    .submit-grid h2 .gold { color:var(--gold); }
+    .submit-panel { background: rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.16); border-radius: var(--radius-lg); padding: 38px; backdrop-filter: blur(8px); }
+    .submit-item { display:grid; grid-template-columns: 52px 1fr; gap:16px; padding: 20px 0; border-bottom:1px solid rgba(255,255,255,.13); }
+    .submit-item:first-child { padding-top:0; }
+    .submit-item:last-of-type { border-bottom:0; }
+    .submit-item .n { color:var(--gold); font-family:'Oswald'; letter-spacing:.08em; font-size:1.30rem;}
+    .submit-item strong { display:block; margin-bottom:5px; font-size:1.30rem;}
+    .submit-item p { color:rgba(255,255,255,.68); line-height:1.55; font-size:1.30rem; }
+    .submit-deadline { font-size:1.3rem; margin-top:28px; display:flex; justify-content:space-between; gap:20px; align-items:end; padding-top:24px; border-top:1px solid rgba(255,255,255,.2); }
+    .submit-deadline small { display:block; text-transform:uppercase; letter-spacing:.16em; opacity:.58; font-size:1.3rem; }
+    .submit-deadline strong { font-family:'Oswald'; font-size:2rem; color:var(--gold); }
+
+    /* DATES */
+    .dates { background: var(--paper); }
+    .date-list { margin-top:54px; border-top:1px solid var(--line); }
+    .date-row { display:grid; grid-template-columns: 170px 1fr 240px; gap:34px; align-items:center; padding:28px 0; border-bottom:1px solid var(--line); transition: padding .25s ease, background .25s ease; }
+    .date-row:hover { padding-inline:18px; background:rgba(225,181,52,.07); }
+    .date-main { font-family:'Oswald'; font-size:1.95rem; color:var(--forest-deep); text-transform:uppercase; }
+    .date-event { font-size:1.35rem; font-weight:700; }
+    .date-place { color:var(--muted); text-align:right; font-size:1.30rem; }
+
+    /* FINAL CTA */
+    .final-cta { background: var(--gold); color: var(--forest-deep); padding: 110px 0 90px; overflow:hidden; }
+    .final-cta .container { position:relative; }
+    .final-cta h2 { font-size: clamp(4.6rem, 10vw, 10rem); max-width: 1380px; }
+    .final-cta p { margin-top:22px; max-width:570px; line-height:1.7; font-size:1.35rem; }
+    .final-actions { margin-top:34px; display:flex; gap:12px; flex-wrap:wrap; }
+    .outline-dark { border:1px solid rgba(24,39,27,.45); color:var(--forest-deep); font-size: 1.3rem;}
+
+    /* FOOTER */
+    footer { background:#0e1710; color:white; padding:72px 0 24px; }
+    .footer-grid { display:grid; grid-template-columns:1.35fr .8fr .8fr 1fr; gap:50px; }
+    .footer-brand p { max-width:380px; color:rgba(255,255,255,.58); line-height:1.7; margin-top:18px; }
+    .footer-title { font-family:'Oswald'; text-transform:uppercase; letter-spacing:.1em; color:var(--gold); margin-bottom:18px; }
+    .footer-links { list-style:none; display:grid; gap:11px; }
+    .footer-links a { color:rgba(255,255,255,.72); text-decoration:none; font-size:.9rem; }
+    .footer-links a:hover { color:white; }
+    .socials { display:flex; flex-wrap:wrap; gap:10px; }
+    .socials a { border:1px solid rgba(255,255,255,.18); border-radius:999px; padding:10px 13px; text-decoration:none; font-size:.82rem; color:rgba(255,255,255,.78); }
+    .footer-bottom { margin-top:56px; padding-top:22px; border-top:1px solid rgba(255,255,255,.1); display:flex; flex-wrap:wrap; justify-content:space-between; gap:14px; color:rgba(255,255,255,.45); font-size:.78rem; }
+    .footer-bottom a { color:rgba(255,255,255,.72); }
+
+    /* REVEALS */
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity .75s ease, transform .75s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+    @keyframes heroZoom { from { transform:scale(1.09); } to { transform:scale(1.03); } }
+    @keyframes ruleIn { from { transform:scaleX(0); } to { transform:scaleX(1); } }
+
+    /* RESPONSIVE */
+    @media (max-width: 1080px) {
+      .nav-links { position:fixed; inset:86px 16px auto 16px; background:rgba(14,23,16,.98); border:1px solid rgba(255,255,255,.1); border-radius:22px; padding:28px; display:none; flex-direction:column; align-items:flex-start; gap:18px; box-shadow:0 30px 70px rgba(0,0,0,.3); }
+      .nav-links.open { display:flex; }
+      .menu-btn { display:grid; place-items:center; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-copy { min-height: 100svh; padding-right:36vw; }
+      .hero-art { position:absolute; inset:0; min-height:100%; z-index:0; }
+      .hero-art::before { background:linear-gradient(90deg, rgba(24,39,27,.98) 0%, rgba(24,39,27,.9) 38%, rgba(24,39,27,.2) 78%, rgba(24,39,27,.12) 100%); }
+      .hero-photo { background-position: 73% center; }
+      .hero-badge { display:none; }
+      .intro-grid, .engage-title, .submit-grid { grid-template-columns:1fr; gap:42px; }
+      .theme-grid { grid-template-columns:1fr; }
+      .theme-card { border-right:0; border-bottom:1px solid var(--line); min-height:300px; }
+      .theme-card:last-child { border-bottom:0; }
+      .theme-card h3 { margin-top:48px; }
+      .criteria-grid { grid-template-columns:1fr 1fr; }
+      .footer-grid { grid-template-columns:1.2fr 1fr 1fr; }
+      .footer-brand { grid-column:1/-1; }
+    }
+
+    @media (max-width: 1100px) {
+      .container { width: min(var(--max), calc(100% - 64px)); }
+    }
+
+    @media (max-width: 760px) {
+      main > .section .container,
+      main > .final-cta .container {
+        width: min(100% - 30px, var(--max));
+      }
+      main > .section {
+        padding-top: 82px;
+        padding-bottom: 82px;
+      }
+      .container { width:min(100% - 30px, var(--max)); }
+      .section { padding:82px 0; }
+      .nav-inner { width:calc(100% - 28px); min-height:76px; }
+      .brand-copy span { display:none; }
+      .brand img { width:78px; height:78px; }
+      .nav-links { inset:76px 12px auto 12px; }
+      .hero-copy { min-height:100svh; padding:126px 22px 70px; justify-content:flex-end; }
+      .hero-title { font-size: clamp(4.2rem, 20vw, 6.6rem); }
+      .hero-subkicker { margin-bottom:26px; }
+      .hero-meta { flex-direction:column; gap:7px; }
+      .scroll-cue { display:none; }
+      .hero-art::before { background:linear-gradient(0deg, rgba(24,39,27,.98) 0%, rgba(24,39,27,.8) 46%, rgba(24,39,27,.15) 80%); }
+      .hero-photo { background-position: 72% 34%; }
+      .section-head { display:block; }
+      .section-head p { margin-top:22px; }
+      .journey-track { grid-template-columns:1fr; gap:38px; }
+      .journey-track::before { left:8px; right:auto; top:18px; bottom:18px; width:1px; height:auto; }
+      .journey-stop { padding:0 0 0 48px; }
+      .journey-stop::before { left:0; top:5px; }
+      .track-grid { grid-template-columns:1fr; }
+      .track-card { min-height:460px; padding:34px 26px; }
+      .criteria-grid { grid-template-columns:1fr; }
+      .criterion { min-height:240px; }
+      .date-row { grid-template-columns:1fr; gap:8px; }
+      .date-place { text-align:left; }
+      .submit-panel { padding:28px 22px; }
+      .submit-deadline { align-items:flex-start; flex-direction:column; }
+      .footer-grid { grid-template-columns:1fr; gap:34px; }
+      .footer-brand { grid-column:auto; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
+      .reveal { opacity:1; transform:none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-nav" id="siteNav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="African Montessori Hub home">
+        <img src="img/African_Montessori_Hub_Logo_WhiteText_141x141.png" alt="African Montessori Hub" onerror="this.style.display='none'">
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Open menu">☰</button>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a  href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-kicker" >AFMOCON 2027</div>
+          <div class="hero-subkicker" style="font-family: 'Pacifico';">African Montessori Conference</div>
+          <h1 class="hero-title display">
+            THE CHILD<br>
+            AT THE<br>
+            <span class="gold" >CENTER</span>
+          </h1>
+          <div class="hero-tagline">Power. Identity. Possibility.</div>
+          <div class="hero-rule"></div>
+          <div class="hero-meta">
+            <span><strong>09–15 August 2027</strong></span>
+            <span>Masvingo + Harare, Zimbabwe</span>
+            <span><strong>Main conference:</strong> 14–15 August</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="https://events.humanitix.com/afmocon-2027?h=SsFxqUgMtkXghkjPBgKENpHCY7XNS8vGd79l90crM0Q&t=1787513296965" target="_blank">Explore AFMOCON </a>
+            <a class="btn btn-ghost" href="#submit">Submit a Proposal </a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-photo"></div>
+          <div class="hero-badge">
+            <small>A Pan-African gathering</small>
+            <strong>Educators · Parents · Changemakers</strong>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-cue">Scroll to discover</div>
+    </section>
+
+    <section class="section intro" id="conference">
+      <div class="container intro-grid reveal">
+        <div>
+          <span class="eyebrow">AFMOCON 2027</span>
+          <h2 class="display" style="margin-top:18px;">A gathering with the <em>child</em> at its center.</h2>
+        </div>
+        <div class="intro-copy">
+          <p>African Montessori Hub invites educators, leaders, and partners to gather around a simple but demanding question:  What shifts when the child's dignity, voice, and brilliance truly lead?</p>
+          <p>Across many contexts, education systems have been shaped by control, standardization, and inherited hierarchies that often 
+silence the very learners they aim to serve. “The Child at the Center” challenges this paradigm by placing identity, agency, 
+and belonging at the heart of learning, drawing from Montessori principles and Afrocentric ways of knowing to explore 
+how environments can nurture independence, cultural rootedness, and purpose in every child. </p>
+          <div class="intro-quote">“The Child at the Center : Power, Identity, and Possibility.”</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section theme-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Conference theme</span>
+            <h2 class="display" style="margin-top:16px;">Three lenses. One center.</h2>
+          </div>
+          <p style="font-size: 1.40rem;">The 2027 theme invites contributors and participants to explore what becomes visible when learning begins with the child rather than the system.</p>
+        </div>
+
+        <div class="theme-grid reveal">
+          <article class="theme-card">
+            <span class="theme-num" style="font-size: 1.40rem;">01 / POWER</span>
+            <div class="theme-dot"></div>
+            <h3 class="display">POWER</h3>
+            <p style="font-size: 1.40rem;">How do learning environments recognize the child’s dignity, voice and agency as a foundation?</p>
+          </article>
+          <article class="theme-card">
+            <span class="theme-num" style="font-size: 1.40rem;">02 / IDENTITY</span>
+            <div class="theme-dot"></div>
+            <h3 class="display">IDENTITY</h3>
+            <p style="font-size: 1.40rem;">How do culture, place, language and belonging shape how children understand themselves and the worlds they inhabit?</p>
+          </article>
+          <article class="theme-card">
+            <span class="theme-num" style="font-size: 1.40rem;">03 / POSSIBILITY</span>
+            <div class="theme-dot"></div>
+            <h3 class="display">POSSIBILITY</h3>
+            <p style="font-size: 1.36rem;">What becomes possible when education is child-centered, culturally grounded and open to new ways of knowing and doing?</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section journey" id="journey">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow" style="color:var(--gold)">The 2027 journey</span>
+            <h2 class="display" style="margin-top:16px;">Two cities. One conference story.</h2>
+          </div>
+          <p style="font-size: 1.40rem;">AFMOCON 2027 is fully in person, beginning with a three-day immersion in Masvingo before moving to Harare for the gala and main conference.</p>
+        </div>
+
+        <div class="journey-track reveal">
+          <article class="journey-stop">
+            <div class="journey-date" style="font-size: 1.40rem;">09–11 AUG</div>
+            <h3 class="display">MASVINGO</h3>
+            <div class="place" style="font-size: .9rem;">Great Zimbabwe</div>
+            <p style="font-size: 1.32rem;">A three-day immersion set within the history and cultural landscape that informs Afrocentric Montessori practice.</p>
+          </article>
+          <article class="journey-stop">
+            <div class="journey-date" style="font-size: 1.40rem;">13 AUG</div>
+            <h3 class="display">GALA</h3>
+            <div class="place" style="font-size: .9rem;">Harare</div>
+            <p style="font-size: 1.32rem;">A Friday evening gathering that brings the AFMOCON community together before the main conference weekend.</p>
+          </article>
+          <article class="journey-stop" >
+            <div class="journey-date" style="font-size: 1.40rem;">14–15 AUG</div>
+            <h3 class="display">AFMOCON</h3>
+            <div class="place" style="font-size: .9rem;">Harare · In person</div>
+            <p style="font-size: 1.32rem;">The main conference weekend: workshops, research posters, dialogue and exchange centered on children, culture and possibility.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section engage" id="call">
+      <div class="container">
+        <div class="engage-title reveal">
+          <div>
+            <span class="eyebrow">Call for presenters</span>
+            <h2 class="display" style="margin-top:16px;">Bring your work to AFMOCON.</h2>
+          </div>
+          <p style="font-size: 1.40rem;">African Montessori Hub invites educators, researchers, practitioners and youth leaders to submit proposals that bring the conference theme to life through practice, evidence and story.</p>
+        </div>
+
+        <div class="track-grid reveal">
+          <article class="track-card workshops">
+            <div>
+              <div class="track-letter">A</div>
+              <span class="eyebrow" style="color:var(--gold)">Track A</span>
+              <h3 class="display" style="margin-top:18px;">WORKSHOPS</h3>
+              <ul >
+                <li style="font-size: 1.30rem;">60–90-minute interactive sessions</li>
+                <li style="font-size: 1.30rem;">Practice-based, participatory and reflective</li>
+                <li style="font-size: 1.30rem;">Classroom practices, leadership, policy or community models</li>
+                <li style="font-size: 1.30rem;">Delivered in person in Harare</li>
+              </ul>
+            </div>
+            <div class="track-note" style="font-size: 1.20rem;">No virtual option</div>
+          </article>
+
+          <article class="track-card posters">
+            <div>
+              <div class="track-letter">B</div>
+              <span class="eyebrow" style="color:var(--forest-deep)">Track B</span>
+              <h3 class="display" style="margin-top:18px;">RESEARCH POSTERS</h3>
+              <ul>
+                <li style="font-size: 1.30rem;">Original research or evaluation findings</li>
+                <li style="font-size: 1.30rem;">Dedicated poster gallery with a live Q&amp;A slot</li>
+                <li style="font-size: 1.30rem;">Welcomes student, early-career and community-based researchers</li>
+                <li style="font-size: 1.30rem;">Presented in person during the Harare conference days</li>
+              </ul>
+            </div>
+            <div class="track-note" style="font-size: 1.20rem;">Research that can be seen, discussed and shared</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section criteria">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">What we are looking for</span>
+            <h2 class="display" style="margin-top:16px;">Work rooted in children, practice and context.</h2>
+          </div>
+          <p style="font-size: 1.40rem;">Strong proposals should connect the conference theme to lived educational environments and meaningful participation.</p>
+        </div>
+
+        <div class="criteria-grid reveal" >
+          <article class="criterion" ><span>01</span><h3>Child-centered</h3><p>Proposals that center the child’s dignity, voice and agency in learning environments.</p></article>
+          <article class="criterion" ><span>02</span><h3>Grounded in practice</h3><p>Work drawing on Montessori pedagogy, play-based and Afrocentric ways of knowing, or both.</p></article>
+          <article class="criterion" ><span>03</span><h3>Context-diverse</h3><p>Contributions from rural, urban, formal and non-formal learning contexts.</p></article>
+          <article class="criterion" ><span>04</span><h3>Youth voice</h3><p>Sessions and posters that include, surface or amplify youth perspectives.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section submit-section" id="submit">
+      <div class="container submit-grid">
+        <div class="reveal">
+          <span class="eyebrow" style="color:var(--gold)">How to submit</span>
+          <h2 class="display" style="margin-top:20px;">HAVE<br>SOMETHING<br><span class="gold">TO CONTRIBUTE?</span></h2>
+          <p style="font-size:1.3rem; margin-top:28px; color:rgba(255,255,255,.68); line-height:1.8; max-width:520px;">Send your proposal to <strong style="color:white">admin@amhhq.org</strong> with the subject line <strong style="color:white">“AFMOCON 2027 Submission.”</strong></p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="mailto:admin@amhhq.org?subject=AFMOCON%202027%20Submission">Submit your proposal ↗</a>
+          </div>
+        </div>
+
+        <div class="submit-panel reveal">
+          <div class="submit-item"><div class="n" style="font-size: 1.80rem;">01</div><div><strong>Presenter / author details</strong><p>Name(s), affiliation and a short bio of 100 words.</p></div></div>
+          <div class="submit-item"><div class="n" style="font-size: 1.80rem;">02</div><div><strong>Session or poster title</strong><p>A clear title for the work you are proposing.</p></div></div>
+          <div class="submit-item"><div class="n" style="font-size: 1.80rem;">03</div><div><strong>Abstract</strong><p>200–300 words describing the content, format and intended takeaway.</p></div></div>
+          <div class="submit-item"><div class="n" style="font-size: 1.80rem;">04</div><div><strong>Track selection</strong><p>Choose Workshop or Research Poster.</p></div></div>
+          <div class="submit-deadline">
+            <div><small>Submission deadline</small><strong>31 MARCH 2027</strong></div>
+            <a class="btn btn-ghost" href="mailto:admin@amhhq.org?subject=AFMOCON%202027%20Question">Ask a question</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dates" id="dates">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Key dates</span>
+            <h2 class="display" style="margin-top:16px;">Mark the journey.</h2>
+          </div>
+          <p style="font-size:1.3rem; ">Everything from proposal submissions to the final conference weekend, in one view.</p>
+        </div>
+
+        <div class="date-list reveal">
+          <div class="date-row"><div class="date-main">31 Mar 2027</div><div class="date-event">Submission deadline</div><div class="date-place">Call for proposals closes</div></div>
+          <div class="date-row"><div class="date-main">30 Apr 2027</div><div class="date-event">Notification of acceptance</div><div class="date-place">Presenters notified</div></div>
+          <div class="date-row"><div class="date-main">09–11 Aug</div><div class="date-event">Masvingo Immersion</div><div class="date-place">Masvingo · Great Zimbabwe</div></div>
+          <div class="date-row"><div class="date-main">13 Aug</div><div class="date-event">Gala Dinner</div><div class="date-place">Harare</div></div>
+          <div class="date-row"><div class="date-main">14–15 Aug</div><div class="date-event">AFMOCON 2027 Conference</div><div class="date-place">Harare · In person only</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container reveal">
+        <span class="eyebrow" style="color:var(--forest-deep)">AFMOCON 2027</span>
+        <h2 class="display" style="margin-top:18px;">THE CHILD REMAINS AT THE CENTER.</h2>
+        <p>Join a Pan-African gathering of educators, researchers, practitioners, parents, youth leaders and changemakers in Zimbabwe in August 2027.</p>
+        <div class="final-actions">
+          <a class="btn btn-dark" href="#submit">Submit a Proposal</a>
+          <a class="btn outline-dark" href="mailto:admin@amhhq.org">admin@amhhq.org</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-copy"><strong style="font-size:1.5rem">AFRICAN MONTESSORI HUB</strong><span style="display:block">Where education meets purpose.</span></div>
+          <p>Building child-centered, culturally grounded learning communities across Africa and beyond.</p>
+        </div>
+        <div>
+          <div class="footer-title">Explore</div>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="afrocentricmontessori.html">Afrocentric Montessori</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="teams.html">Our Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-title">AFMOCON</div>
+          <ul class="footer-links">
+            <li><a href="#conference">Conference</a></li>
+            <li><a href="#journey">2027 Journey</a></li>
+            <li><a href="#call">Call for Presenters</a></li>
+            <li><a href="#dates">Key Dates</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-title">Follow us</div>
+          <div class="socials">
+            <a href="https://wa.me/+263786509699" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="https://www.linkedin.com/company/greatzimbabwemontessori/posts/?feedView=all" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/amh_zim?igsh=YjFtZnBnY3p6amRt" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> African Montessori Hub. Where education meets purpose.</span>
+        <span>Website by <a href="mailto:fengshuistudiohq@gmail.com?subject=Website%20Inquiry">Feng Shui Studio</a></span>
+      </div>
+    </div>
+  </footer> -->
+
+  <script>
+    const nav = document.getElementById('siteNav');
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    const updateNav = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+    updateNav();
+    window.addEventListener('scroll', updateNav, { passive: true });
+
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.textContent = open ? '×' : '☰';
+      document.body.classList.toggle('nav-open', open);
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.textContent = '☰';
+      document.body.classList.remove('nav-open');
+    }));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
