@@ -1,0 +1,85 @@
+/* Page-specific additions; no shared AFMOCON or site selectors. */
+.af27-countdown {
+  width: min(100%, 460px);
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid rgba(225, 181, 52, .32);
+  border-radius: var(--radius-sm);
+  background: rgba(24, 39, 27, .7);
+}
+.af27-countdown__title {
+  color: var(--gold);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.af27-countdown__date { margin-top: 8px; color: var(--cream); font-size: .78rem; line-height: 1.6; }
+.af27-countdown__digits { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 18px; }
+.af27-countdown__unit { text-align: center; border-right: 1px solid rgba(225, 181, 52, .25); }
+.af27-countdown__unit:last-child { border-right: 0; }
+.af27-countdown__unit span {
+  display: block;
+  color: var(--gold-soft);
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.15;
+}
+.af27-countdown__unit small { display: block; margin-top: 8px; font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--cream); }
+.af27-countdown__status { margin-top: 16px; color: var(--gold-soft); font-size: 1.1rem; line-height: 1.5; }
+.af27-countdown [hidden] { display: none; }
+
+.af27-registration { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-top: 42px; }
+.af27-registration__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(24px, 3vw, 40px);
+  border: 1px solid var(--forest-deep);
+  border-radius: var(--radius-md);
+  background: var(--forest-deep);
+  color: var(--cream);
+  text-decoration: none;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.af27-registration__card--local { background: var(--cream); color: var(--forest-deep); }
+.af27-registration__kicker { font-size: .73rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; line-height: 1.6; }
+.af27-registration__title { margin-top: 18px; font-family: 'Oswald', sans-serif; font-size: clamp(2rem, 3.3vw, 3rem); text-transform: uppercase; line-height: 1.15; }
+.af27-registration__description { margin: 16px 0 28px; font-size: 1rem; line-height: 1.7; }
+.af27-registration__action { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; margin-top: auto; padding-top: 20px; border-top: 1px solid currentColor; font-size: .9rem; font-weight: 700; }
+.af27-registration__action > span { font-size: 1.5rem; line-height: 1; }
+.af27-registration__card[href]:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.af27-registration__card:focus-visible { outline: 3px solid var(--forest-deep); outline-offset: 5px; }
+
+.af27-gallery { background: var(--paper); }
+.af27-gallery .section-head h2 { margin-top: 16px; }
+.af27-gallery .section-head p { font-size: 1.15rem; }
+.af27-gallery__grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-rows: clamp(120px, 14vw, 180px); gap: 14px; }
+.af27-gallery__item { min-width: 0; overflow: hidden; border-radius: var(--radius-sm); background: var(--cream); }
+.af27-gallery__item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.af27-gallery__item:hover img { transform: scale(1.035); }
+.af27-gallery__item:nth-child(1) { grid-column: 1 / 13; grid-row: 1 / 3; }
+.af27-gallery__item:nth-child(2) { grid-column: 1 / 5; grid-row: 3 / 4; }
+.af27-gallery__item:nth-child(3) { grid-column: 5 / 9; grid-row: 3 / 4; }
+.af27-gallery__item:nth-child(4) { grid-column: 9 / 13; grid-row: 3 / 5; }
+.af27-gallery__item:nth-child(5) { grid-column: 1 / 5; grid-row: 4 / 5; }
+.af27-gallery__item:nth-child(6) { grid-column: 5 / 9; grid-row: 4 / 6; }
+.af27-gallery__item:nth-child(7) { grid-column: 1 / 5; grid-row: 5 / 7; }
+.af27-gallery__item:nth-child(8) { grid-column: 9 / 13; grid-row: 5 / 6; }
+.af27-gallery__item:nth-child(9) { grid-column: 5 / 9; grid-row: 6 / 7; }
+.af27-gallery__item:nth-child(10) { grid-column: 9 / 13; grid-row: 6 / 7; }
+
+@media (max-width: 760px) {
+  .af27-countdown { padding: 18px 12px; }
+  .af27-registration { grid-template-columns: minmax(0, 1fr); }
+  .af27-gallery__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: auto; gap: 10px; }
+  .af27-gallery__item:nth-child(n) { grid-column: auto; grid-row: auto; aspect-ratio: 4 / 3; }
+}
+@media (max-width: 480px) {
+  .af27-gallery__grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .af27-registration__card, .af27-gallery__item img { transition: none; }
+  .af27-registration__card[href]:hover, .af27-gallery__item:hover img { transform: none; }
+}

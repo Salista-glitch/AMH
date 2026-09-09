@@ -64,7 +64,7 @@
       font-weight: 800;
       font-size: 1.04rem;
     }
-    .eyebrow::before { content: ''; width: 36px; height: 2px; background: var(--gold); }
+    .eyebrow::before {  width: 36px; height: 2px; background: var(--gold); }
     .display {
       font-family: 'Oswald', sans-serif;
       text-transform: uppercase;
@@ -476,6 +476,7 @@
       .reveal { opacity:1; transform:none; }
     }
   </style>
+  <link rel="stylesheet" href="css/afmocon-2027-additions.css">
 </head>
 <body>
 
@@ -513,8 +514,19 @@
             <span>Masvingo + Harare, Zimbabwe</span>
             <span><strong>Main conference:</strong> 14–15 August</span>
           </div>
+          <div class="af27-countdown" data-af27-countdown data-start="2027-08-09T00:00:00+02:00" data-end="2027-08-16T00:00:00+02:00" aria-labelledby="af27-countdown-title">
+            <p class="af27-countdown__title" id="af27-countdown-title">The journey begins</p>
+            <p class="af27-countdown__date"><time datetime="2027-08-09">09 August 2027</time> &middot; Zimbabwe time (CAT)</p>
+            <div class="af27-countdown__digits" role="timer" aria-live="off" aria-label="Time until the AFMOCON 2027 journey begins">
+              <div class="af27-countdown__unit"><span data-unit="days">--</span><small>Days</small></div>
+              <div class="af27-countdown__unit"><span data-unit="hours">--</span><small>Hours</small></div>
+              <div class="af27-countdown__unit"><span data-unit="minutes">--</span><small>Minutes</small></div>
+              <div class="af27-countdown__unit"><span data-unit="seconds">--</span><small>Seconds</small></div>
+            </div>
+            <p class="af27-countdown__status" role="status" hidden></p>
+            <noscript><p class="af27-countdown__date">The journey begins on 9 August; the main conference is 14&ndash;15 August.</p></noscript>
+          </div>
           <div class="hero-actions">
-            <a class="btn btn-gold" href="https://events.humanitix.com/afmocon-2027?h=SsFxqUgMtkXghkjPBgKENpHCY7XNS8vGd79l90crM0Q&t=1787513296965" target="_blank">Explore AFMOCON </a>
             <a class="btn btn-ghost" href="#submit">Submit a Proposal </a>
           </div>
         </div>
@@ -719,14 +731,54 @@ how environments can nurture independence, cultural rootedness, and purpose in e
       </div>
     </section>
 
-    <section class="final-cta">
+    <section class="final-cta" id="registration">
       <div class="container reveal">
         <span class="eyebrow" style="color:var(--forest-deep)">AFMOCON 2027</span>
         <h2 class="display" style="margin-top:18px;">THE CHILD REMAINS AT THE CENTER.</h2>
         <p>Join a Pan-African gathering of educators, researchers, practitioners, parents, youth leaders and changemakers in Zimbabwe in August 2027.</p>
+        <div class="af27-registration" aria-label="Guest registration">
+          <!-- Add the international Google Form URL as href and remove aria-disabled when supplied. -->
+          <a class="af27-registration__card" id="af27-international" role="link" aria-disabled="true" href="https://events.humanitix.com/afmocon-2027?h=SsFxqUgMtkXghkjPBgKENpHCY7XNS8vGd79l90crM0Q&t=1787513296965" target="_blank">
+            <span class="af27-registration__kicker">Join us from around the world</span>
+            <span class="af27-registration__title">International guests</span>
+            <span class="af27-registration__description">Travelling to Zimbabwe for AFMOCON 2027.</span>
+            <span class="af27-registration__action">Registration link <span aria-hidden="true">&nearr;</span></span>
+          </a>
+          <!-- Add the local Google Form URL as href and remove aria-disabled when supplied. -->
+          <a class="af27-registration__card af27-registration__card--local" id="af27-local" role="link" aria-disabled="true" href="https://forms.gle/UmD5b7uBeDT4ksFo6" target="_blank">
+            <span class="af27-registration__kicker">Join us from Zimbabwe</span>
+            <span class="af27-registration__title">Local guests</span>
+            <span class="af27-registration__description">Based in Zimbabwe and ready to be part of the gathering.</span>
+            <span class="af27-registration__action">Registration link  <span aria-hidden="true">&nearr;</span></span>
+          </a>
+        </div>
         <div class="final-actions">
           <a class="btn btn-dark" href="#submit">Submit a Proposal</a>
           <a class="btn outline-dark" href="mailto:admin@amhhq.org">admin@amhhq.org</a>
+        </div>
+      </div>
+    </section>
+    <section class="section af27-gallery" aria-labelledby="af27-gallery-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Our community in focus</span>
+            <h2 class="display" id="af27-gallery-title">Moments from<br>AFMOCON 2026.</h2>
+          </div>
+          <!-- <p style="font-size: 1.30rem;">A look back at the people and shared moments that bring the AFMOCON community together.</p>
+         -->
+        </div>
+        <div class="af27-gallery__grid">
+          <figure class="af27-gallery__item"><img src="img/afmocon26/afmocon26 (11).avif" alt="AFMOCON 2025 community gathering" loading="lazy" decoding="async"></figure>
+          <figure class="af27-gallery__item"><img src="img/afmocon26/afmocon26 (8).avif" alt="A moment from AFMOCON 2025" loading="lazy" decoding="async"></figure>
+          <figure class="af27-gallery__item"><img src="img/afmocon26/afmocon26 (5).avif" alt="A moment from AFMOCON 2025" loading="lazy" decoding="async"></figure>
+          <figure class="af27-gallery__item"><img src="img/afmocon26/afmocon26 (7).avif" alt="A moment from AFMOCON 2025" loading="lazy" decoding="async"></figure>
+          <figure class="af27-gallery__item"><img src="img/afmocon26/afmocon26 (2).avif" alt="A moment from AFMOCON 2025" loading="lazy" decoding="async"></figure>
+          <figure class="af27-gallery__item"><img src="img/afmocon26/afmocon26 (1).avif" alt="A moment from AFMOCON 2025" loading="lazy" decoding="async"></figure>
+          <figure class="af27-gallery__item"><img src="img/afmocon26/afmocon26 (3).avif" alt="A moment from AFMOCON 2025" loading="lazy" decoding="async"></figure>
+          <figure class="af27-gallery__item"><img src="img/afmocon26/afmocon26 (4).avif" alt="A moment from AFMOCON 2025" loading="lazy" decoding="async"></figure>
+          <figure class="af27-gallery__item"><img src="img/afmocon26/afmocon26 (9).avif" alt="A moment from AFMOCON 2025" loading="lazy" decoding="async"></figure>
+          <figure class="af27-gallery__item"><img src="img/afmocon26/afmocon26 (10).avif" alt="A moment from AFMOCON 2025" loading="lazy" decoding="async"></figure>
         </div>
       </div>
     </section>
@@ -807,7 +859,9 @@ how environments can nurture independence, cultural rootedness, and purpose in e
     }, { threshold: .12 });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
   </script>
+  <script src="js/afmocon-2027-countdown.js"></script>
 </body>
 </html>
