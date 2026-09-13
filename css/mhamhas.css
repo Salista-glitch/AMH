@@ -1,0 +1,71 @@
+/* All new design rules are scoped to the program body; shared header/footer stay intact. */
+.mhamhas { --mm-green:#355e3b; --mm-ink:#29482f; --mm-cream:#fffbf2; --mm-gold:#f3ac20; background:var(--mm-cream); color:#3e3e3e; }
+.mhamhas h1,.mhamhas h2,.mhamhas h3 { font-family:Georgia,'Times New Roman',serif; color:var(--mm-ink); font-weight:400; }
+.mhamhas h1 { font-size:clamp(3.4rem,6.4vw,6rem); line-height:1.04; letter-spacing:-.045em; margin-bottom:1.4rem; }
+.mhamhas h2 { font-size:clamp(2rem,3.5vw,3.25rem); line-height:1.17; margin-bottom:1.7rem; letter-spacing:-.025em; }
+.mhamhas h3 { font-size:1.55rem; line-height:1.25; }
+.mhamhas p,.mhamhas li { font-size:1.125rem; line-height:1.8; }
+.mhamhas .mm-eyebrow { font-family:Roboto,sans-serif; font-size:.72rem; font-weight:700; letter-spacing:.17em; text-transform:uppercase; color:var(--mm-green); margin-bottom:1.5rem; }
+.mhamhas .mm-hero { padding:190px 0 80px; background:linear-gradient(125deg,#f5ebd0,#fffbf2 65%); }
+.mhamhas .mm-hero-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:65px; align-items:center; }
+.mhamhas .mm-script { font-family:Pacifico,cursive; font-size:clamp(1.2rem,2vw,1.7rem); color:#956326; margin:0 0 1.7rem; }
+.mhamhas .mm-intro { max-width:560px; font-size:1.125rem; }
+.mhamhas .mm-logo-wrap { position:relative; padding:15px; border:1px solid #b8733366; border-radius:48% 48% 8px 8px; background:#fff; transform:rotate(2deg); box-shadow:15px 20px 0 #355e3b0c; }
+.mhamhas .mm-logo { display:block; width:100%; height:auto; border-radius:48% 48% 0 0; }
+.mhamhas .mm-logo-note { display:block; text-align:center; font-family:Georgia,serif; font-style:italic; color:#6e4c1e; padding:0 8px 18px; }
+.mhamhas .mm-actions { display:flex; gap:24px; align-items:center; flex-wrap:wrap; margin-top:28px; }
+.mhamhas .mm-button { display:inline-flex; align-items:center; justify-content:center; gap:25px; padding:15px 23px; background:var(--mm-green); color:white; border-radius:8px; font-weight:600; text-decoration:none; line-height:1.5; }
+.mhamhas .mm-button:hover { background:#27482c; }
+.mhamhas a:focus-visible { outline:3px solid #b87333; outline-offset:5px; }
+.mhamhas .mm-text-link { color:var(--mm-green); text-decoration:underline; text-underline-offset:5px; }
+.mhamhas .mm-facts { background:var(--mm-green); color:#fff; }
+.mhamhas .mm-facts .container { display:grid; grid-template-columns:1fr 1fr 1.2fr; padding-top:26px; padding-bottom:26px; }
+.mhamhas .mm-facts p { margin:0; padding:0 30px; border-right:1px solid #ffffff40; }
+.mhamhas .mm-facts p:first-child { padding-left:0; }
+.mhamhas .mm-facts p:last-child { border:0; }
+.mhamhas .mm-facts strong { display:block; font:1.6rem Georgia,serif; color:#f5ebd0; margin-bottom:6px; }
+.mhamhas .mm-facts span { font-size:.85rem; color:#fff8e8; }
+.mhamhas .mm-section { padding-top:90px; padding-bottom:90px; }
+.mhamhas .mm-split { display:grid; grid-template-columns:1fr 1.2fr; gap:80px; align-items:start; }
+.mhamhas .mm-rule { display:block; width:70px; height:3px; background:#b87333; }
+.mhamhas .mm-note { border-left:3px solid #b87333; padding:10px 0 10px 22px; color:#5d503a; font-size:1.125rem; margin-top:25px; }
+.mhamhas .mm-learning,.mhamhas .mm-facilitators { background:#f5ebd066; }
+.mhamhas .mm-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:40px; }
+.mhamhas .mm-cards article { padding:32px 28px; background:#fffbf2; border:1px solid #b8733338; border-radius:5px 38px 5px 5px; }
+.mhamhas .mm-number { display:block; font-size:.75rem; text-transform:uppercase; letter-spacing:.12em; color:#88602f; margin-bottom:36px; }
+.mhamhas .mm-cards p { margin-bottom:0; font-size:1.125rem; }
+.mhamhas .mm-steps article { display:flex; gap:24px; border-bottom:1px solid #355e3b25; margin-bottom:23px; padding-bottom:13px; }
+.mhamhas .mm-steps article>span { font:italic 1.25rem Georgia,serif; color:#956326; padding-top:3px; }
+.mhamhas .mm-steps p { font-size:1.125rem; }
+.mhamhas .mm-philosophy { background:var(--mm-ink); padding:75px 0; text-align:center; }
+.mhamhas .mm-philosophy h2 { color:#f5ebd0; }
+.mhamhas .mm-philosophy p { color:#f5ebd0; }
+.mhamhas .mm-philosophy .mm-eyebrow { color:#f3ac20; }
+.mhamhas .mm-philosophy-copy { max-width:850px; margin:35px auto 0; display:grid; grid-template-columns:1fr 1fr; gap:40px; text-align:left; }
+.mhamhas .mm-philosophy-copy p { font-size:1.125rem; }
+.mhamhas .research-handbook { margin-top:0; padding-top:70px; padding-bottom:50px; }
+.mhamhas .mm-benefits { list-style:none; margin:0; padding:0; }
+.mhamhas .mm-benefits li { padding:12px 0 12px 30px; position:relative; border-bottom:1px solid #355e3b25; }
+.mhamhas .mm-benefits li::before { content:'✧'; position:absolute; left:0; color:#946021; }
+.mhamhas .mm-impact { margin-top:50px; border-top:1px solid #b8733340; padding-top:35px; display:flex; gap:35px; align-items:center; }
+.mhamhas .mm-impact strong { font:4rem Georgia,serif; color:var(--mm-green); }
+.mhamhas .mm-impact p { max-width:750px; margin:0; }
+.mhamhas .mm-people { display:grid; grid-template-columns:1fr 1fr; gap:45px; margin-top:36px; }
+.mhamhas .mm-people article { display:flex; align-items:start; gap:24px; }
+.mhamhas .mm-people img { width:130px; height:165px; object-fit:cover; border-radius:65px 65px 5px 5px; }
+.mhamhas .mm-people p { font-size:1.125rem; }
+.mhamhas .mm-partners { margin:40px 0 0; padding-top:30px; border-top:1px solid #b8733338; font-size:1.125rem; }
+.mhamhas .mm-join { text-align:center; max-width:750px; }
+.mhamhas .mm-join .mm-button { margin:14px 0 24px; }
+.mhamhas .mm-contact { font-size:.9rem; }
+.mhamhas .mm-contact a { color:var(--mm-green); }
+.mhamhas .mm-gallery { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; }
+.mhamhas .mm-gallery img { width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:8px; }
+.mhamhas [id] { scroll-margin-top:35px; }
+@media(max-width:991px) { .mhamhas .mm-hero { padding-top:70px; } .mhamhas .mm-hero-grid,.mhamhas .mm-split { gap:35px; } .mhamhas .mm-people article { display:block; } .mhamhas .mm-people img { margin-bottom:24px; } .mhamhas .mm-cards { gap:15px; } .mhamhas .mm-cards article { padding:25px 20px; } }
+@media(max-width:767px) { .mhamhas .mm-hero-grid,.mhamhas .mm-split,.mhamhas .mm-cards,.mhamhas .mm-philosophy-copy,.mhamhas .mm-people { grid-template-columns:minmax(0,1fr); } .mhamhas .mm-hero { padding:45px 0 55px; } .mhamhas .mm-logo-wrap { max-width:360px; margin:15px auto 0; transform:none; } .mhamhas .mm-section { padding-top:55px; padding-bottom:55px; } .mhamhas .mm-facts .container { grid-template-columns:1fr; gap:18px; } .mhamhas .mm-facts p,.mhamhas .mm-facts p:first-child { border:0; padding:0; display:flex; gap:18px; align-items:center; } .mhamhas .mm-facts strong { font-size:1.25rem; min-width:145px; margin:0; } .mhamhas .mm-number { margin-bottom:20px; } .mhamhas .mm-philosophy { padding:55px 0; } .mhamhas .mm-philosophy-copy { gap:5px; } .mhamhas .mm-impact { align-items:start; gap:20px; } .mhamhas .mm-impact strong { font-size:2.8rem; } .mhamhas .mm-people article { display:flex; gap:20px; } .mhamhas .mm-people img { width:90px; height:120px; } .mhamhas .mm-gallery { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; } }
+
+.mhamhas { font-family:Poppins, sans-serif; }
+.mhamhas .mm-price { color:#355e3b; font-size:1.2rem; }
+.mhamhas .mm-price strong { font:2.6rem Georgia,serif; margin-right:8px; }
+@media(min-width:992px) { .mhamhas .mm-hero { padding-top:260px; background:linear-gradient(to bottom,#355e3b 0,#355e3b 195px,transparent 195px),linear-gradient(125deg,#f5ebd0,#fffbf2 65%); } }
